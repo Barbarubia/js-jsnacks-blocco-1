@@ -74,6 +74,7 @@ document.getElementById('sum').innerHTML = `${sumNumbers}`;
 
 
 
+/*
 //INIZIO JSnack 4
 //In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby
 // Chiedi all’utente il suo nome e comunicagli se può partecipare o no alla festa.
@@ -164,12 +165,39 @@ buttonVerify.addEventListener('click', function () {
 )
 
 // FINE JSnack 4
+*/
+
+
 
 
 // Snack 5
 // Crea un array vuoto.
 // Chiedi per 6 volte all’utente di inserire un numero,
 // se è dispari inseriscilo nell’array.
+
+// Creo un array vuoto
+let array = [];
+
+// Stabilisco quante volte voglio chiedere all'utente di inserire un numero (ovvero da quanti elementi dovrà essere composto l'array alla fine)
+const numElementi = 6;
+
+// Genero un ciclo FOR che chiede all'utente di immettere un valore numerico per il numero di volte già stabilito
+// Ogni valore immesso diventa un elemento dell'array
+for (inserisci = 1; inserisci <= numElementi; inserisci++) {
+    let number = parseInt(prompt('Inserisci un numero'));
+    // Genero una condizione IF: se il numero inserito è dispari, lo inserisco nell'array
+    if (number % 2 == 1) {
+        array.push(number);
+    }
+}
+
+// Stampo a video l'elenco degli elementi inseriti nell'array
+document.getElementById('array').innerHTML = array;
+
+// FINE JSnack 5
+
+
+
 // Snack 6
 // Chiedi un numero di 4 cifre all’utente
 // e calcola la somma di tutte le cifre che compongono il numero.
