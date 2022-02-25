@@ -145,7 +145,7 @@ buttonVerify.addEventListener('click', function () {
     let isUserPresent = false;
 
     // Genero un ciclo FOR che confronta il nome e cognome dell'utente con la lista degli invitati e, se lo trova trasforma in VERO la variabile creata
-    for (invitato = 0; invitato < listaInvitati.length; invitato++) {
+    for (let invitato = 0; invitato < listaInvitati.length; invitato++) {
         if (listaInvitati[invitato].toLowerCase() == userNameSurname.toLowerCase()) {
             isUserPresent = true;
         }
@@ -169,7 +169,7 @@ buttonVerify.addEventListener('click', function () {
 
 
 
-
+/*
 // Snack 5
 // Crea un array vuoto.
 // Chiedi per 6 volte all’utente di inserire un numero,
@@ -183,7 +183,7 @@ const numElementi = 6;
 
 // Genero un ciclo FOR che chiede all'utente di immettere un valore numerico per il numero di volte già stabilito
 // Ogni valore immesso diventa un elemento dell'array
-for (inserisci = 1; inserisci <= numElementi; inserisci++) {
+for (let inserisci = 1; inserisci <= numElementi; inserisci++) {
     let number = parseInt(prompt('Inserisci un numero'));
     // Genero una condizione IF: se il numero inserito è dispari, lo inserisco nell'array
     if (number % 2 == 1) {
@@ -195,9 +195,37 @@ for (inserisci = 1; inserisci <= numElementi; inserisci++) {
 document.getElementById('array').innerHTML = array;
 
 // FINE JSnack 5
+*/
 
 
 
 // Snack 6
 // Chiedi un numero di 4 cifre all’utente
 // e calcola la somma di tutte le cifre che compongono il numero.
+
+// Seleziono l'elemento HTML in cui l'utente inserisce il numero
+let inputBox = document.getElementById('number');
+
+// Seleziono l'elemento HTML bottone che al click selezionerà il calcolo richiesto
+let calcButton = document.getElementById('calculate');
+
+// Seleziono l'elemento HTML in cui visualizzerò il risultato
+let outputArea = document.getElementById('output');
+
+// Definisco una variabile che userò per richiamare per il numero inserito dall'utente
+let numeroInserito = '';
+
+// Genero la funzione al click sul bottone
+calcButton.addEventListener('click', function () {
+    
+    // Attribuisco alla variabile numeroInserito il valore del numero immesso dall'utente
+    numeroInserito = inputBox.value;
+   
+
+    // Genero un avviso se il numero è composto da meno di 4 cifre
+    if (numeroInserito.length != 4) {
+        outputArea.innerHTML = `Devi inserire un numero di 4 cifre numeriche`;
+    }
+
+}
+)

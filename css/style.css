@@ -28,7 +28,8 @@ h1 {
     text-align: center;
 }
 
-.snack4 {
+.snack4,
+.snack6 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,13 +37,20 @@ h1 {
     gap: 2rem;
 }
 
-.snack4 input {
+.snack4 input,
+.snack6 input {
     padding: 0.5em 1.5em;
     border: none;
     border-radius: 3rem;
 }
 
-.snack4 button {
+.snack6 input {
+    width: 300px;
+    text-align: center;
+}
+
+.snack4 button,
+.snack6 button {
     padding: 0.5em 1.5em;
     border: none;
     border-radius: 3rem;
