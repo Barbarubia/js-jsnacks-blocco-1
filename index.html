@@ -1,88 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snack 25-02-22</title>
+    <title>JSnacks 25-02-22</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <div class="container">
 
-        <!-- JSnack 1 -->
+        <nav>
 
-        <!--
-        Niente HTML Eseguito con un alert JS
-        -->
+            <button id="button-active-js1" class="nav-card">
+                <h3>JSnack - 1</h3>
+                <p>
+                    L’utente inserisce due numeri in successione, con due prompt.<br>Il software stampa il maggiore.
+                </p>
+            </button>
 
+            <button id="button-active-js2" class="nav-card">
+                <h3>JSnack - 2</h3>
+                <p>
+                    L'utente inserisce 2 parole in successione, con 2 prompt.<br>Il software stampa prima la parola più corta, poi la parola più lunga.
+                </p>
+            </button>
 
+            <button id="button-active-js3" class="nav-card">
+                <h3>JSnack - 3</h3>
+                <p>
+                    Il software deve chiedere per 10 volte all'utente di inserire un numero.<br>>Il programma stampa la somma di tutti i numeri inseriti.
+                </p>
+            </button>
 
+            <button id="button-active-js4" class="nav-card">
+                <h3>JSnack - 4</h3>
+                <p>
+                    In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby.<br>Chiedi all’utente il suo nome e comunicagli se può partecipare o no alla festa.
+                </p>
+            </button>
 
+            <button id="button-active-js5" class="nav-card">
+                <h3>JSnack - 5</h3>
+                <p>
+                    Crea un array vuoto.<br>>Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo nell’array.
+                </p>
+            </button>
 
-        <!-- JSnack 2 -->
+            <button id="button-active-js6" class="nav-card">
+                <h3>JSnack - 6</h3>
+                <p>
+                    Chiedi un numero di 4 cifre all’utente e calcola la somma di tutte le cifre che compongono il numero.
+                </p>
+            </button>
 
-        <!--
-        <h1 id="word"></h1>
-        -->
-
-        
-
-
-
-        <!-- JSnack 3 -->
-
-        <!--
-        <h1 id="sum"></h1>
-        -->
-
-
-
-
-
-        <!-- JSnack 4 -->
-
-        <!--
-        <div class="snack4">
-            <h1>Verifica invito</h1>
-            <p>Inserisci il tuo nome e il tuo cognome per verificare se sei nella lista degli invitati.</p>
-            <div>
-                <label for="name">Nome:</label>
-                <input type="text" name="name" id="name" placeholder="Inserisci il tuo nome">
-                <label for="surname">Cognome:</label>
-                <input type="text" name="surname" id="surname"placeholder="Inserisci il tuo cognome">
-            </div>    
-            <button id="verify">Invia</button>
-            <h2 id="output"></h2>
-        </div>
-        -->
-
+        </nav>
 
 
+        <main>
 
+            <div class="main-container">
 
-        <!-- JSnack 5 -->
+                <!-- JSnack 1 -->
 
-        <!--
-        <h1 id="array"></h1>
-        -->
+                <div class="jsnack-01 display-none">
+                    
+                    <!--
+                    Niente HTML Eseguito con un alert JS
+                    -->
 
-
-
-
-
-        <!-- JSnack 6 -->
-
-        <div class="snack6">
-            <h1>Calcolo la somma delle cifre</h1>
-            <p>Inserisci un numero di 4 cifre e ti dirò la loro somma</p>
-            <input type="number" maxlength="4" name="number" id="number" placeholder="Inserisci un numero di 4 cifre">
-            <button id="calculate">Calcola</button>
-            <h2 id="output"></h2>
-        </div>
+                </div>
         
         
+        
+                <!-- JSnack 2 -->
+
+                <div class="jsnack-02 display-none">
+
+                    <h1 id="js2-word"></h1>
+
+                </div>
+
+
+        
+                <!-- JSnack 3 -->
+
+                <div class="jsnack-03 display-none">
+
+                    <h1 id="js3-sum"></h1>
+
+                </div>
+
+        
+        
+                <!-- JSnack 4 -->
+
+                <div class="jsnack-04 display-none">
+                    <h1>Verifica invito</h1>
+                    <p>Inserisci il tuo nome e il tuo cognome per verificare se sei nella lista degli invitati.</p>
+                    <div>
+                        <label for="js4-name">Nome:</label>
+                        <input type="text" name="name" id="js4-name" placeholder="Inserisci il tuo nome">
+                        <label for="js4-surname">Cognome:</label>
+                        <input type="text" name="surname" id="js4-surname"placeholder="Inserisci il tuo cognome">
+                    </div>    
+                    <button id="js4-verify">Invia</button>
+                    <h2 id="js4-output"></h2>
+                </div>
+
+
+        
+                <!-- JSnack 5 -->
+
+                <div class="jsnack-05 display-none">
+
+                    <h1 id="js5-array"></h1>
+
+                </div>
+
+        
+        
+                <!-- JSnack 6 -->
+        
+                <div class="jsnack-06 display-none">
+                    <h1>Calcolo la somma delle cifre</h1>
+                    <p>Inserisci un numero di 4 cifre e ti dirò la loro somma</p>
+                    <input type="number" maxlength="4" name="number" id="js6-number" placeholder="Inserisci un numero di 4 cifre">
+                    <button id="js6-calculate">Calcola</button>
+                    <h2 id="js6-output"></h2>
+                </div>
+                
+        
+            </div>
+
+        </main>
+
+
 
 
 

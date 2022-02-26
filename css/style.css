@@ -1,7 +1,18 @@
+/* RESET CSS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+}
+
+
+
+/* Regole CSS Generali */
+
+:root {
+    --nav_width: 30rem;
+    --nav_cards_number: 6;
 }
 
 html {
@@ -13,10 +24,48 @@ body {
 }
 
 .container {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+/* BARRA LATERALE */
+
+nav {
+    width: var(--nav_width);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.nav-card {
+    width: 80%;
+    height: calc(100% / var(--nav_cards_number));
+    border: 1px solid black;
+    border-top-left-radius: 3rem;
+    border-bottom-left-radius: 3rem;
+    padding: .5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+
+/* MAIN */
+
+main {
+    width: calc(100% - var(--nav_width));
+    height: 100%;
+}
+
+.main-container {
     height: calc(100vh - 4rem);
-    margin: 2rem auto;
-    padding: 1rem;
-    max-width: 800px;
+    margin: 2rem;
+    padding: 2rem;
     background-color: rgba(255,255,255,.6);
     border-radius: 2rem;
     display: flex;
@@ -24,12 +73,8 @@ body {
     align-items: center;
 }
 
-h1 {
-    text-align: center;
-}
-
-.snack4,
-.snack6 {
+.jsnack-04,
+.jsnack-06 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,20 +82,20 @@ h1 {
     gap: 2rem;
 }
 
-.snack4 input,
-.snack6 input {
+.jsnack-04 input,
+.jsnack-06 input {
     padding: 0.5em 1.5em;
     border: none;
     border-radius: 3rem;
 }
 
-.snack6 input {
+.jsnack-06 input {
     width: 300px;
     text-align: center;
 }
 
-.snack4 button,
-.snack6 button {
+.jsnack-04 button,
+.jsnack-06 button {
     padding: 0.5em 1.5em;
     border: none;
     border-radius: 3rem;
@@ -60,4 +105,9 @@ h1 {
 
 .capitalize {
     text-transform: capitalize;
+}
+
+/* Disabilito il display di tutti gli JSnacks */
+.display-none {
+    display: none;
 }

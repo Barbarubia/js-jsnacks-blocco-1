@@ -1,86 +1,178 @@
+// Definisco una variabile per i bottoni che attivano i vari JSnacks
+let buttonJS1 = document.getElementById('button-active-js1');
+let buttonJS2 = document.getElementById('button-active-js2');
+let buttonJS3 = document.getElementById('button-active-js3');
+let buttonJS4 = document.getElementById('button-active-js4');
+let buttonJS5 = document.getElementById('button-active-js5');
+let buttonJS6 = document.getElementById('button-active-js6');
+
+// Definisco un evento che al click su ciascun botton attiva le funzioni dei relativi JSnack (la cui prima istruzione è visualizzare l'HTML di quel JSnack)
+
+buttonJS1.addEventListener('click', functionJSnack1);
+buttonJS2.addEventListener('click', functionJSnack2);
+buttonJS3.addEventListener('click', functionJSnack3);
+buttonJS4.addEventListener('click', functionJSnack4);
+buttonJS5.addEventListener('click', functionJSnack5);
+buttonJS6.addEventListener('click', functionJSnack6);
+
+// Definisco gli elementi HTML che contengono i vari JSnacks
+let divJS1 = document.querySelector('.jsnack-01');
+let divJS2 = document.querySelector('.jsnack-02');
+let divJS3 = document.querySelector('.jsnack-03');
+let divJS4 = document.querySelector('.jsnack-04');
+let divJS5 = document.querySelector('.jsnack-05');
+let divJS6 = document.querySelector('.jsnack-06');
+
+
+
+
+
+
+
 /*
-// INIZIO JSnack 1
-// L’utente inserisce due numeri in successione, con due prompt.
-// Il software stampa il maggiore.
+INIZIO JSNACK 1
+
+L’utente inserisce due numeri in successione, con due prompt.
+Il software stampa il maggiore.
+*/
+
+function functionJSnack1() {
+
+// Pulisco la sezione main dell'HTML da eventuali precedenti JSnacks visualizzati
+divJS1.classList.add('display-none');
+divJS2.classList.add('display-none');
+divJS3.classList.add('display-none');
+divJS4.classList.add('display-none');
+divJS5.classList.add('display-none');
+divJS6.classList.add('display-none');
+
+// Abilito la visualizzazione dello JSnack 1 rimuovendo la classe display-none
+divJS1.classList.remove('display-none');
 
 // Chiedo all'utente di inserire un numero
-let numero1 = parseInt(prompt('dimmi un numero'));
+let numero1JS1 = parseInt(prompt('dimmi un numero'));
 
 // Chiedo all'utente di inserire un altro numero
-let numero2 = parseInt(prompt('dimmi un altro numero'));
+let numero2JS1 = parseInt(prompt('dimmi un altro numero'));
 
 
 // Genero un ciclo IF per confrontare i 2 numeri e visualizzare un popup con il numero più alto oppure un avviso che i 2 numeri sono uguali.
-if (numero1 == numero2) {
+if (numero1JS1 == numero2JS1) {
     alert('i 2 numeri immessi sono uguali');
-} else if (numero1 > numero2) {
-    alert(`${numero1}`);
+} else if (numero1JS1 > numero2JS1) {
+    alert(`${numero1JS1}`);
 } else {
-    alert(`${numero2}`);
+    alert(`${numero2JS1}`);
+}
 }
 
 // FINE JSnack 1
-*/
 
 
 
 /*
-// INIZIO JSnack 2
-// L'utente inserisce 2 parole in successione, con 2 prompt.
-// Il software stampa prima la parola più corta, poi la parola più lunga.
+INIZIO JSNACK 2
+
+L'utente inserisce 2 parole in successione, con 2 prompt.
+Il software stampa prima la parola più corta, poi la parola più lunga.
+*/
+
+function functionJSnack2() {
+    
+// Pulisco la sezione main dell'HTML da eventuali precedenti JSnacks visualizzati
+divJS1.classList.add('display-none');
+divJS2.classList.add('display-none');
+divJS3.classList.add('display-none');
+divJS4.classList.add('display-none');
+divJS5.classList.add('display-none');
+divJS6.classList.add('display-none');
+
+// Abilito la visualizzazione dello JSnack 2 rimuovendo la classe display-none
+divJS2.classList.remove('display-none');
 
 // Chiedo all'utente di scrivere una parola
-let word1 = prompt(`Scrivi una parola:`);
+let word1JS2 = prompt(`Scrivi una parola:`);
 
 // Chiedo all'utente di scrivere un'altra parola
-let word2 = prompt(`Scrivi un'altra parola:`);
+let word2JS2 = prompt(`Scrivi un'altra parola:`);
 
 // Seleziono l'id html dove stamperò il messaggio
-let message = document.getElementById('word');
+let messageJS2 = document.getElementById('js2-word');
 
 // Genero un ciclo IF per confrontare la lunghezza delle parole inserite e stampare a video le parole in ordine di lunghezza (prima la più corta) o un avviso che la lunghezza è la stessa
-if (word1.length == word2.length) {
-    message.innerHTML = (`"${word1}" e "${word2}" hanno la stessa lunghezza`);
-} else if (word1.length > word2.length) {
-    message.innerHTML = (`"${word2}"<br>"${word1}"`);
+if (word1JS2.length == word2JS2.length) {
+    messageJS2.innerHTML = (`"${word1JS2}" e "${word2JS2}" hanno la stessa lunghezza`);
+} else if (word1JS2.length > word2JS2.length) {
+    messageJS2.innerHTML = (`"${word2JS2}"<br>"${word1JS2}"`);
 } else {
-    message.innerHTML = (`"${word1}"<br>"${word2}"`);
+    messageJS2.innerHTML = (`"${word1JS2}"<br>"${word2JS2}"`);
+}
 }
 
 // FINE JSnack 2
-*/
 
 
 
 /*
-// INIZIO JSnack 3
-// Il software deve chiedere per 10 volte all'utente di inserire un numero.
-// Il programma stampa la somma di tutti i numeri inseriti.
+INIZIO JSNACK 3
+
+Il software deve chiedere per 10 volte all'utente di inserire un numero.
+Il programma stampa la somma di tutti i numeri inseriti.
+*/
+
+function functionJSnack3() {
+    
+// Pulisco la sezione main dell'HTML da eventuali precedenti JSnacks visualizzati
+divJS1.classList.add('display-none');
+divJS2.classList.add('display-none');
+divJS3.classList.add('display-none');
+divJS4.classList.add('display-none');
+divJS5.classList.add('display-none');
+divJS6.classList.add('display-none');
+
+// Abilito la visualizzazione dello JSnack 3 rimuovendo la classe display-none
+divJS3.classList.remove('display-none');
 
 // definisco una variabile con valore iniziale uguale a 0
-let sumNumbers = 0;
+let sumNumbersJS3 = 0;
 
 // Genero un ciclo FOR che chiede all'utente di inserire "i" numeri e ad ogni interazione incremento la variabile sumNumbers aggiungendo il numero inserito
-for (i = 1; i <= 10; i++) {
-    let number = parseInt(prompt("inserisci un numero:"));
-    sumNumbers += number;
+for (iJS3 = 1; iJS3 <= 10; iJS3++) {
+    let numberJS3 = parseInt(prompt("inserisci un numero:"));
+    sumNumbersJS3 += numberJS3;
 }
 
 // Stampo a video il risultato della somma degli "i" elementi
-document.getElementById('sum').innerHTML = `${sumNumbers}`;
+document.getElementById('js3-sum').innerHTML = `${sumNumbersJS3}`;
+}
 
-// FINE JSnack 3
-*/
+// FINE JSNACK 3
+
 
 
 
 /*
-//INIZIO JSnack 4
-//In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby
-// Chiedi all’utente il suo nome e comunicagli se può partecipare o no alla festa.
+INIZIO JSNACK 4
+
+In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby
+Chiedi all’utente il suo nome e comunicagli se può partecipare o no alla festa.
+*/
+
+function functionJSnack4() {
+    
+// Pulisco la sezione main dell'HTML da eventuali precedenti JSnacks visualizzati
+divJS1.classList.add('display-none');
+divJS2.classList.add('display-none');
+divJS3.classList.add('display-none');
+divJS4.classList.add('display-none');
+divJS5.classList.add('display-none');
+divJS6.classList.add('display-none');
+
+// Abilito la visualizzazione dello JSnack 4 rimuovendo la classe display-none
+divJS4.classList.remove('display-none');
 
 // Definisco l'array con la lista degli invitati (= componenti della classe 56: studenti e prof)
-const listaInvitati = [
+const listaInvitatiJS4 = [
     "Adelin Dumitru Tanasa",
     "Aldo Cocurullo",
     "Alessandro Ballabio",
@@ -124,123 +216,156 @@ const listaInvitati = [
 ]
 
 // Definisco l'elemento HTML in cui l'utente immette il nome
-let insertNameBox = document.getElementById('name');
+let insertNameBoxJS4 = document.getElementById('js4-name');
 // Definisco l'elemento HTML in cui l'utente immette il cognome
-let insertSurnameBox = document.getElementById('surname');
+let insertSurnameBoxJS4 = document.getElementById('js4-surname');
 // Definisco l'elemento bottone HTML che fa partire la funzione al click
-let buttonVerify = document.getElementById('verify');
+let buttonVerifyJS4 = document.getElementById('js4-verify');
 // Definisco l'area HTML in cui stamperò il risultato della funzione
-let outputArea = document.getElementById('output');
+let outputAreaJS4 = document.getElementById('js4-output');
 
 // Genero l'evento al click sul bottono per verificare il nome e il cognome inseriti
-buttonVerify.addEventListener('click', function () {
+buttonVerifyJS4.addEventListener('click', function () {
     // Leggo il nome inserito dall'utente
-    let userName = insertNameBox.value;
+    let userNameJS4 = insertNameBoxJS4.value;
     // Leggo il cognome inserito dall'utente
-    let userSurname = insertSurnameBox.value;
+    let userSurnameJS4 = insertSurnameBoxJS4.value;
     // Unisco nome e cognome dell'utente
-    let userNameSurname = `${userName} ${userSurname}`;
+    let userNameSurnameJS4 = `${userNameJS4} ${userSurnameJS4}`;
 
     // Creo una variabile per verificare la presenza in lista con valore iniziale uguale a FALSO
-    let isUserPresent = false;
+    let isUserPresentJS4 = false;
 
     // Genero un ciclo FOR che confronta il nome e cognome dell'utente con la lista degli invitati e, se lo trova trasforma in VERO la variabile creata
-    for (let invitato = 0; invitato < listaInvitati.length; invitato++) {
-        if (listaInvitati[invitato].toLowerCase() == userNameSurname.toLowerCase()) {
-            isUserPresent = true;
+    for (let invitatoJS4 = 0; invitatoJS4 < listaInvitatiJS4.length; invitatoJS4++) {
+        if (listaInvitatiJS4[invitatoJS4].toLowerCase() == userNameSurnameJS4.toLowerCase()) {
+            isUserPresentJS4 = true;
         }
     }
 
     // Genero una condizione IF che stampa a video se l'utente è invitato alla festa oppure no
-    if (isUserPresent == true) {
-        outputArea.innerHTML = `Ciao <span class="capitalize">${userName}</span>!<br>Sei nella lista degli invitati.<br>BUON DIVERTIMENTO!`;
+    if (isUserPresentJS4 == true) {
+        outputAreaJS4.innerHTML = `Ciao <span class="capitalize">${userNameJS4}</span>!<br>Sei nella lista degli invitati.<br>BUON DIVERTIMENTO!`;
     } else {
-        outputArea.innerHTML = `Mi dispiace, <span class="capitalize">${userName}</span>.<br>Non sei nella lista degli invitati.`;
+        outputAreaJS4.innerHTML = `Mi dispiace, <span class="capitalize">${userNameJS4}</span>.<br>Non sei nella lista degli invitati.`;
     }
 
     // Cancello i dati inseriti negli input
-    insertNameBox.value = '';
-    insertSurnameBox.value= '';
+    insertNameBoxJS4.value = '';
+    insertSurnameBoxJS4.value= '';
 }
 )
+}
 
 // FINE JSnack 4
-*/
 
 
 
 /*
-// Snack 5
-// Crea un array vuoto.
-// Chiedi per 6 volte all’utente di inserire un numero,
-// se è dispari inseriscilo nell’array.
+INIZIO JSNACK 5
+Crea un array vuoto.
+Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo nell’array.
+*/
+
+function functionJSnack5() {
+    
+// Pulisco la sezione main dell'HTML da eventuali precedenti JSnacks visualizzati
+divJS1.classList.add('display-none');
+divJS2.classList.add('display-none');
+divJS3.classList.add('display-none');
+divJS4.classList.add('display-none');
+divJS5.classList.add('display-none');
+divJS6.classList.add('display-none');
+
+// Abilito la visualizzazione dello JSnack 5 rimuovendo la classe display-none
+divJS5.classList.remove('display-none');
 
 // Creo un array vuoto
-let array = [];
+let arrayJS5 = [];
 
 // Stabilisco quante volte voglio chiedere all'utente di inserire un numero (ovvero da quanti elementi dovrà essere composto l'array alla fine)
-const numElementi = 6;
+const numElementiJS5 = 6;
 
 // Genero un ciclo FOR che chiede all'utente di immettere un valore numerico per il numero di volte già stabilito
 // Ogni valore immesso diventa un elemento dell'array
-for (let inserisci = 1; inserisci <= numElementi; inserisci++) {
-    let number = parseInt(prompt('Inserisci un numero'));
+for (let inserisciJS5 = 1; inserisciJS5 <= numElementiJS5; inserisciJS5++) {
+    let numberJS5 = parseInt(prompt('Inserisci un numero'));
     // Genero una condizione IF: se il numero inserito è dispari, lo inserisco nell'array
-    if (number % 2 == 1) {
-        array.push(number);
+    if (numberJS5 % 2 == 1) {
+        arrayJS5.push(numberJS5);
     }
 }
 
 // Stampo a video l'elenco degli elementi inseriti nell'array
-document.getElementById('array').innerHTML = array;
+document.getElementById('js5-array').innerHTML = arrayJS5;
+}
 
 // FINE JSnack 5
+
+
+
+
+
+/*
+INIZIO JSNACK 6
+
+Chiedi un numero di 4 cifre all’utente
+e calcola la somma di tutte le cifre che compongono il numero.
 */
 
+function functionJSnack6() {
+    
+// Pulisco la sezione main dell'HTML da eventuali precedenti JSnacks visualizzati
+divJS1.classList.add('display-none');
+divJS2.classList.add('display-none');
+divJS3.classList.add('display-none');
+divJS4.classList.add('display-none');
+divJS5.classList.add('display-none');
+divJS6.classList.add('display-none');
 
-
-
-// Snack 6
-// Chiedi un numero di 4 cifre all’utente
-// e calcola la somma di tutte le cifre che compongono il numero.
+// Abilito la visualizzazione dello JSnack 6 rimuovendo la classe display-none
+divJS6.classList.remove('display-none');
 
 // Seleziono l'elemento HTML in cui l'utente inserisce il numero
-let inputBox = document.getElementById('number');
+let inputBoxJS6 = document.getElementById('js6-number');
 
 // Seleziono l'elemento HTML bottone che al click selezionerà il calcolo richiesto
-let calcButton = document.getElementById('calculate');
+let calcButtonJS6 = document.getElementById('js6-calculate');
 
 // Seleziono l'elemento HTML in cui visualizzerò il risultato
-let outputArea = document.getElementById('output');
+let outputAreaJS6 = document.getElementById('js6-output');
 
 // Definisco una variabile che userò per richiamare per il numero inserito dall'utente
-let numeroInserito = '';
+let numeroInseritoJS6 = '';
 
 // Creo una variabile somma con valore iniziale pari a zero
-let somma = 0
+let sommaJS6 = 0
 
 // Genero la funzione al click sul bottone
-calcButton.addEventListener('click', function () {
+calcButtonJS6.addEventListener('click', function () {
     
     // Attribuisco alla variabile numeroInserito il valore del numero immesso dall'utente
-    numeroInserito = inputBox.value;
+    numeroInseritoJS6 = inputBoxJS6.value;
    
 
     // Genero un avviso se il numero è composto da meno di 4 cifre
-    if (numeroInserito.length != 4) {
-        outputArea.innerHTML = `Devi inserire un numero di 4 cifre numeriche`;
+    if (numeroInseritoJS6.length != 4) {
+        outputAreaJS6.innerHTML = `Devi inserire un numero di 4 cifre numeriche`;
     } else {
         // Genero un ciclo FOR con un contatore che pesca le singole cifre del numero inserito e le aggiunge al valore precedente della variabile somma precedentemente creata
-        for (let contatore = 0; contatore < numeroInserito.length; contatore++) {
-            somma += parseInt(numeroInserito[contatore]);
+        for (let contatoreJS6 = 0; contatoreJS6 < numeroInseritoJS6.length; contatoreJS6++) {
+            sommaJS6 += parseInt(numeroInseritoJS6[contatoreJS6]);
         }
 
         // Stampo il risultato a video
-        document.getElementById('output').innerHTML = `La somma delle cifre inserite è ${somma}!`
+        outputAreaJS6.innerHTML = `La somma delle cifre inserite è ${sommaJS6}!`
         }
 
         // Resetto il valore di somma a zero
-        somma = 0;
+        sommaJS6 = 0;
 
 }
 )
+}
+
+// FINE JSNACK 6
