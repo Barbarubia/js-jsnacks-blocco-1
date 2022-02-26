@@ -199,6 +199,7 @@ document.getElementById('array').innerHTML = array;
 
 
 
+
 // Snack 6
 // Chiedi un numero di 4 cifre all’utente
 // e calcola la somma di tutte le cifre che compongono il numero.
@@ -215,6 +216,9 @@ let outputArea = document.getElementById('output');
 // Definisco una variabile che userò per richiamare per il numero inserito dall'utente
 let numeroInserito = '';
 
+// Creo una variabile somma con valore iniziale pari a zero
+let somma = 0
+
 // Genero la funzione al click sul bottone
 calcButton.addEventListener('click', function () {
     
@@ -225,7 +229,18 @@ calcButton.addEventListener('click', function () {
     // Genero un avviso se il numero è composto da meno di 4 cifre
     if (numeroInserito.length != 4) {
         outputArea.innerHTML = `Devi inserire un numero di 4 cifre numeriche`;
-    }
+    } else {
+        // Genero un ciclo FOR con un contatore che pesca le singole cifre del numero inserito e le aggiunge al valore precedente della variabile somma precedentemente creata
+        for (let contatore = 0; contatore < numeroInserito.length; contatore++) {
+            somma += parseInt(numeroInserito[contatore]);
+        }
+
+        // Stampo il risultato a video
+        document.getElementById('output').innerHTML = `La somma delle cifre inserite è ${somma}!`
+        }
+
+        // Resetto il valore di somma a zero
+        somma = 0;
 
 }
 )
