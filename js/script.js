@@ -49,21 +49,65 @@ divJS6.classList.add('display-none');
 // Abilito la visualizzazione dello JSnack 1 rimuovendo la classe display-none
 divJS1.classList.remove('display-none');
 
+// VERSIONE CON PROMPT E ALERT
+
 // Chiedo all'utente di inserire un numero
-let numero1JS1 = parseInt(prompt('dimmi un numero'));
+let numero1JS1 = parseInt(prompt('Digita un numero'));
 
 // Chiedo all'utente di inserire un altro numero
-let numero2JS1 = parseInt(prompt('dimmi un altro numero'));
+let numero2JS1 = parseInt(prompt('Digita un altro numero'));
+
+// Definisco l'elemento HTML dove stamperò il risultato finale
+let outputAreaJS1 = document.getElementById('js1-output');
 
 
 // Genero un ciclo IF per confrontare i 2 numeri e visualizzare un popup con il numero più alto oppure un avviso che i 2 numeri sono uguali.
-if (numero1JS1 == numero2JS1) {
-    alert('i 2 numeri immessi sono uguali');
+if (isNaN(numero1JS1) || isNaN(numero2JS1)) {
+    outputAreaJS1.innerHTML = `Devi inserire dei valori numerici`;  
+} else if (numero1JS1 == numero2JS1) {
+    outputAreaJS1.innerHTML = `I due numeri inseriti sono uguali`;
 } else if (numero1JS1 > numero2JS1) {
-    alert(`${numero1JS1}`);
+    outputAreaJS1.innerHTML = `Il primo numero inserito è ${numero1JS1}.<br>Il secondo numero inserito è ${numero2JS1}.<br>${numero1JS1} è il numero più grande.`;
 } else {
-    alert(`${numero2JS1}`);
+    outputAreaJS1.innerHTML = `Il primo numero inserito è ${numero1JS1}.<br>Il secondo numero inserito è ${numero2JS1}.<br>${numero2JS1} è il numero più grande.`;
 }
+
+// FINE VERSIONE CON PROMPT E ALERT
+
+
+// VERSIONE HTML CON INPUT
+/*
+// Seleziono gli elementi HTML in cui l'utente inserisce i due numeri richiesti
+let numero1BoxJS1 = document.getElementById('js1-number1');
+let numero2BoxJS1 = document.getElementById('js1-number2');
+// Definisco due variabili, inizialmente vuote, per i numeri inseriti dall'utente
+let numeroInserito1JS1 = '';
+let numeroInserito2JS1 = '';
+// Definisco l'elemento bottone HTML che effettua il confronto tra i due numeri
+let buttonConfrontaJS1 = document.getElementById('js1-confronta');
+// Definisco l'area HTML in cui stamperò il risultato del confronto
+let outputAreaJS1 = document.getElementById('js1-output');
+
+// Genero l'evento al click sul bottone di confronto
+buttonConfrontaJS1.addEventListener('click', function () {
+    // Leggo i numeri inseriti dall'utente e li sovrascrivo alla variabile numeroInserito
+    numeroInserito1JS1 = numero1BoxJS1.value;
+    numeroInserito2JS1 = numero2BoxJS1.value;
+    // Se i dati inseriti non sono valori numerici...
+    if (isNaN(numeroInserito1JS1) || isNaN(numeroInserito2JS1)) {
+        outputAreaJS1.innerHTML = `Devi inserire dei valori numerici`;
+    } else if (numeroInserito1JS1 > numeroInserito2JS1) {
+        outputAreaJS1.innerHTML = `${numeroInserito1JS1} è il numero più grande`;
+    } else if (numeroInserito1JS1 < numeroInserito2JS1) {
+        outputAreaJS1.innerHTML = `${numeroInserito2JS1} è il numero più grande`;
+    } else {
+        outputAreaJS1.innerHTML = `I due numeri inseriti sono uguali`;
+    }
+}
+)
+// FINE VERSIONE HTML CON INPUT
+*/
+
 }
 
 // FINE JSnack 1
@@ -99,13 +143,18 @@ let word2JS2 = prompt(`Scrivi un'altra parola:`);
 // Seleziono l'id html dove stamperò il messaggio
 let messageJS2 = document.getElementById('js2-word');
 
+// Definisco una variabile per avvisare l'utente che può usare esclusivamente caratteri alfabetici
+var caratteriConsentitiJS2 = /^[a-zA-Z]+$/;
+
 // Genero un ciclo IF per confrontare la lunghezza delle parole inserite e stampare a video le parole in ordine di lunghezza (prima la più corta) o un avviso che la lunghezza è la stessa
-if (word1JS2.length == word2JS2.length) {
-    messageJS2.innerHTML = (`"${word1JS2}" e "${word2JS2}" hanno la stessa lunghezza`);
+if (caratteriConsentitiJS2.test(word1JS2) == false || caratteriConsentitiJS2.test(word2JS2) == false) {
+    messageJS2.innerHTML = `Puoi inserire soltanto caratteri alfabetici senza spazi`;
+} else if (word1JS2.length == word2JS2.length) {
+    messageJS2.innerHTML = `Le parole "${word1JS2}" e "${word2JS2}" hanno la stessa lunghezza`;
 } else if (word1JS2.length > word2JS2.length) {
-    messageJS2.innerHTML = (`"${word2JS2}"<br>"${word1JS2}"`);
+    messageJS2.innerHTML = `"${word2JS2}"<br>"${word1JS2}"`;
 } else {
-    messageJS2.innerHTML = (`"${word1JS2}"<br>"${word2JS2}"`);
+    messageJS2.innerHTML = `"${word1JS2}"<br>"${word2JS2}"`;
 }
 }
 
@@ -224,7 +273,7 @@ let buttonVerifyJS4 = document.getElementById('js4-verify');
 // Definisco l'area HTML in cui stamperò il risultato della funzione
 let outputAreaJS4 = document.getElementById('js4-output');
 
-// Genero l'evento al click sul bottono per verificare il nome e il cognome inseriti
+// Genero l'evento al click sul bottone per verificare il nome e il cognome inseriti
 buttonVerifyJS4.addEventListener('click', function () {
     // Leggo il nome inserito dall'utente
     let userNameJS4 = insertNameBoxJS4.value;

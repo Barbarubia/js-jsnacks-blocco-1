@@ -42,15 +42,23 @@ nav {
 
 .nav-card {
     width: 80%;
-    height: calc(100% / var(--nav_cards_number));
+    min-height: 4rem;
+    /* height: calc(100% / var(--nav_cards_number)); */
     border: 1px solid black;
-    border-top-left-radius: 3rem;
-    border-bottom-left-radius: 3rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
     padding: .5rem 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     cursor: pointer;
+    text-align: left;
+}
+
+.nav-card:hover p,
+.nav-card:active p,
+.nav-card:focus p {
+    display: block;
 }
 
 
@@ -82,8 +90,8 @@ main {
     gap: 2rem;
 }
 
-.jsnack-04 input,
-.jsnack-06 input {
+
+input {
     padding: 0.5em 1.5em;
     border: none;
     border-radius: 3rem;
@@ -94,8 +102,7 @@ main {
     text-align: center;
 }
 
-.jsnack-04 button,
-.jsnack-06 button {
+button {
     padding: 0.5em 1.5em;
     border: none;
     border-radius: 3rem;
