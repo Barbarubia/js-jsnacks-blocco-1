@@ -150,11 +150,11 @@ var caratteriConsentitiJS2 = /^[a-zA-Z]+$/;
 if (caratteriConsentitiJS2.test(word1JS2) == false || caratteriConsentitiJS2.test(word2JS2) == false) {
     messageJS2.innerHTML = `Puoi inserire soltanto caratteri alfabetici senza spazi`;
 } else if (word1JS2.length == word2JS2.length) {
-    messageJS2.innerHTML = `Le parole "${word1JS2}" e "${word2JS2}" hanno la stessa lunghezza`;
+    messageJS2.innerHTML = `Le parole "${word1JS2}" e "${word2JS2}" hanno la stessa lunghezza (${word1JS2.length} caratteri).`;
 } else if (word1JS2.length > word2JS2.length) {
-    messageJS2.innerHTML = `"${word2JS2}"<br>"${word1JS2}"`;
+    messageJS2.innerHTML = `Le parole inserite, in ordine di lunghezza dalla più corta alla più lunga, sono:<br>"${word2JS2}" (${word2JS2.length} caratteri)<br>"${word1JS2}" (${word1JS2.length} caratteri)`;
 } else {
-    messageJS2.innerHTML = `"${word1JS2}"<br>"${word2JS2}"`;
+    messageJS2.innerHTML = `Le parole inserite, in ordine di lunghezza dalla più corta alla più lunga, sono:<br>"${word1JS2}" (${word1JS2.length} caratteri)<br>"${word2JS2}" (${word2JS2.length} caratteri)`;
 }
 }
 
@@ -192,7 +192,7 @@ for (iJS3 = 1; iJS3 <= 10; iJS3++) {
 }
 
 // Stampo a video il risultato della somma degli "i" elementi
-document.getElementById('js3-sum').innerHTML = `${sumNumbersJS3}`;
+document.getElementById('js3-sum').innerHTML = `La somma dei numeri inseriti è ${sumNumbersJS3}.`;
 }
 
 // FINE JSNACK 3
