@@ -11,8 +11,9 @@
 /* Regole CSS Generali */
 
 :root {
-    --nav_width: 30rem;
+    --nav_width: 20rem;
     --nav_cards_number: 6;
+    --header-height: 7rem;
 }
 
 html {
@@ -20,12 +21,29 @@ html {
 }
 
 body {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(34, 34, 34);
 }
 
 .container {
+    margin: 0 2rem 2rem 2rem;
+    height: calc(100vh - var(--header-height) - 2rem);
     display: flex;
     flex-direction: row;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    height: var(--header-height);
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 5rem;
 }
 
 
@@ -34,31 +52,49 @@ body {
 
 nav {
     width: var(--nav_width);
-    height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: flex-end;
 }
 
 .nav-card {
-    width: 80%;
-    min-height: 4rem;
-    /* height: calc(100% / var(--nav_cards_number)); */
-    border: 1px solid black;
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
+    background-color: rgba(136, 128, 128, 0.6);
+    border-bottom: 1px solid black;
     padding: .5rem 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex-grow: 1;
     cursor: pointer;
-    text-align: left;
+    text-align: center;
+    color: white;
+}
+
+.nav-card:first-of-type {
+    border-top-left-radius: 3rem;
+}
+
+.nav-card:last-of-type {
+    border-bottom: none;
+    border-bottom-left-radius: 3rem;
+}
+
+.nav-card:hover,
+.nav-card:active,
+.nav-card:focus {
+    background-color: rgba(255,255,255,.6);
+    border: none;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    color: black;;
 }
 
 .nav-card:hover p,
 .nav-card:active p,
 .nav-card:focus p {
     display: block;
+    text-align: left;
 }
 
 
@@ -67,15 +103,14 @@ nav {
 
 main {
     width: calc(100% - var(--nav_width));
-    height: 100%;
 }
 
 .main-container {
-    height: calc(100vh - 4rem);
-    margin: 2rem;
+    height: calc(100vh - var(--header-height) - 2rem);
     padding: 2rem;
     background-color: rgba(255,255,255,.6);
-    border-radius: 2rem;
+    border-top-right-radius: 3rem;
+    border-bottom-right-radius: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,7 +126,7 @@ main {
 }
 
 
-input {
+main input {
     padding: 0.5em 1.5em;
     border: none;
     border-radius: 3rem;
@@ -102,7 +137,7 @@ input {
     text-align: center;
 }
 
-button {
+main button {
     padding: 0.5em 1.5em;
     border: none;
     border-radius: 3rem;
