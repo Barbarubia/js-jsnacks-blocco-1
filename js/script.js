@@ -23,7 +23,7 @@ buttonJS19.addEventListener('click', functionJSnack19);
 buttonJS21.addEventListener('click', functionJSnack21);
 buttonJS21b.addEventListener('click', functionJSnack21b);
 buttonJS22.addEventListener('click', functionJSnack22);
-// buttonJS23.addEventListener('click', functionJSnack23);
+buttonJS23.addEventListener('click', functionJSnack23);
 
 // Definisco gli elementi HTML che contengono i vari JSnacks
 let divJS1 = document.querySelector('.jsnack-01');
@@ -37,7 +37,6 @@ let divJS21 = document.querySelector('.jsnack-21');
 let divJS21b = document.querySelector('.jsnack-21b');
 let divJS22 = document.querySelector('.jsnack-22');
 let divJS23 = document.querySelector('.jsnack-23');
-
 
 
 
@@ -648,6 +647,7 @@ if (!isNaN(sumJS21b)) {
 
 
 
+
 /*
 INIZIO JSNACK 2.2
 
@@ -690,6 +690,179 @@ if (isNaN(numInseritoJS22) || (numInseritoJS22 - parseInt(numInseritoJS22) != 0)
 
 }
 
+ // FINE JSNACK 2.2
 
+
+
+
+
+ /*
+INIZIO JSNACK 2.3
+
+Generatore di “nomi cognomi” casuali: prendendo una lista di nomi e una lista di cognomi, Gatsby vuole generare una falsa lista di 3 invitati.
+*/
+
+function functionJSnack23() {
     
-    // FINE JSNACK 2.2
+// Pulisco la sezione main dell'HTML da eventuali precedenti JSnacks visualizzati
+divJS1.classList.add('display-none');
+divJS2.classList.add('display-none');
+divJS3.classList.add('display-none');
+divJS4.classList.add('display-none');
+divJS5.classList.add('display-none');
+divJS6.classList.add('display-none');
+divJS19.classList.add('display-none');
+divJS21.classList.add('display-none');
+divJS21b.classList.add('display-none');
+divJS22.classList.add('display-none');
+divJS23.classList.add('display-none');
+
+// Abilito la visualizzazione dello JSnack 2.3 rimuovendo la classe display-none
+divJS23.classList.remove('display-none');
+
+// Definisco un array con la lista di nomi
+
+const listaNomiJS23 = [
+    "Adelin Dumitru",
+    "Aldo",
+    "Alessandro",
+    "Alessio",
+    "Anthony",
+    "Antonio",
+    "Camilla",
+    "Chiara",
+    "Cristian",
+    "Daniele",
+    "Erika",
+    "Federico",
+    "Gabriel",
+    "Giacomo",
+    "Giovanni",
+    "Giuseppe",
+    "Henri",
+    "Khongor",
+    "Kristian",
+    "Laura",
+    "Luca",
+    "Luigi",
+    "Maria Giuliana",
+    "Mario",
+    "Marzio",
+    "Massimo",
+    "Matteo",
+    "Mattia",
+    "Mauro",
+    "Michela",
+    "Mirko",
+    "Paoloe",
+    "Piergiorgio",
+    "Salvatore",
+    "Samuele",
+    "Simone",
+    "Stefano"
+]
+
+// Definisco un array con la lista di cognomi
+
+const listaCognomiJS23 = [
+    "Tanasa",
+    "Cocurullo",
+    "Ballabio",
+    "Tucci",
+    "Uva",
+    "Vitiello",
+    "Cecconi",
+    "Straziota",
+    "Palombi",
+    "Passaro",
+    "Bricicaru",
+    "De Simone",
+    "Sarleti",
+    "Mura",
+    "Spanu",
+    "Passariello",
+    "Calia",
+    "Mirizzi",
+    "Kapidani",
+    "Gerelchimeg",
+    "Llambro",
+    "Margherita",
+    "Andaloro",
+    "Lo Bianco",
+    "Bardella Gerbi",
+    "Pasinetti",
+    "Martino",
+    "Battinelli",
+    "Segattini",
+    "La Selva",
+    "Costantinescu",
+    "Colangelo",
+    "Moschella",
+    "Calafiore",
+    "Piras",
+    "Praticò",
+    "Della Rocca",
+    "Tartaglia",
+    "Stortini"
+]
+
+const nomiCognomiRealiJS23 = [
+    "Adelin Dumitru Tanasa",
+    "Aldo Cocurullo",
+    "Alessandro Ballabio",
+    "Alessandro Tucci",
+    "Alessandro Uva",
+    "Alessio Vitiello",
+    "Anthony Cecconi",
+    "Antonio Straziota",
+    "Camilla Palombi",
+    "Chiara Passaro",
+    "Cristian Bricicaru",
+    "Daniele De Simone",
+    "Erika Sarleti",
+    "Federico Mura",
+    "Gabriel Spanu",
+    "Giacomo Passariello",
+    "Giovanni Calia",
+    "Giuseppe Mirizzi",
+    "Henri Kapidani",
+    "Khongor Gerelchimeg",
+    "Kristian Llambro",
+    "Laura Margherita",
+    "Luca Andaloro",
+    "Luca Lo Bianco",
+    "Luigi Bardella Gerbi",
+    "Maria Giuliana Pasinetti",
+    "Mario Martino",
+    "Marzio Della Rocca",
+    "Massimo Battinelli",
+    "Matteo Segattini",
+    "Mattia La Selva",
+    "Mauro Costantinescu",
+    "Michela Colangelo",
+    "Mirko Moschella",
+    "Paolo Calafiore",
+    "Piergiorgio Piras",
+    "Salvatore Praticò",
+    "Samuele Della Rocca",
+    "Simone Tartaglia",
+    "Stefano Stortini"
+]
+
+// Pesco un nome a caso dall'array dei nomi
+let posizioneRandomNomeJS23 = Math.floor(Math.random() * listaNomiJS23.length);
+let nomeRandomJS23 = listaNomiJS23[posizioneRandomNomeJS23];
+
+// Pesco un cognome a caso dall'array dei cognomi
+let posizioneRandomCognomeJS23 = Math.floor(Math.random() * listaCognomiJS23.length);
+let cognomeRandomJS23 = listaCognomiJS23[posizioneRandomCognomeJS23];
+
+// Genero un nome + cognome casuale
+let nomeCognomeRandomJS23 = nomeRandomJS23 + ' ' + cognomeRandomJS23;
+
+console.log(nomeCognomeRandomJS23);
+
+
+}
+
+// FINE JSNACK 2.3
