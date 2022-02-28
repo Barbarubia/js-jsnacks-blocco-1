@@ -874,11 +874,12 @@ while (listaInvitatiRandomJS23.length < numeroInvitatiRandomJS23) {
     invitatoRandomJS23 = nomeRandomJS23 + ' ' + cognomeRandomJS23;
 
     // Genero una condizione IF per confrontare il nome casuale con i nomi reali, in quanto il mio obiettivo è che i nomi casuali siano diversi da quelli reali
-    if (!nomiCognomiRealiJS23.includes(invitatoRandomJS23)) {
+    // Inoltre (2nda condizione if) verifico che non ci siano combinazioni random identiche
+    if (!nomiCognomiRealiJS23.includes(invitatoRandomJS23) && !listaInvitatiRandomJS23.includes(invitatoRandomJS23)) {
         // Incremento il contatore
         contatoreInvitatiJS23++;
 
-        // Inserisco i nomi generati in un array
+        // Inserisco i nomi generati nell'array delle combinazioni random
         listaInvitatiRandomJS23.push(invitatoRandomJS23);
     }
   
