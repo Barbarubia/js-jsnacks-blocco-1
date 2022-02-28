@@ -754,7 +754,7 @@ const listaNomiJS23 = [
     "Mauro",
     "Michela",
     "Mirko",
-    "Paoloe",
+    "Paolo",
     "Piergiorgio",
     "Salvatore",
     "Samuele",
@@ -849,18 +849,41 @@ const nomiCognomiRealiJS23 = [
     "Stefano Stortini"
 ]
 
-// Pesco un nome a caso dall'array dei nomi
-let posizioneRandomNomeJS23 = Math.floor(Math.random() * listaNomiJS23.length);
-let nomeRandomJS23 = listaNomiJS23[posizioneRandomNomeJS23];
+// Definisco quanti nomi casuali voglio generare
+const numeroInvitatiRandomJS23 = 3;
 
-// Pesco un cognome a caso dall'array dei cognomi
-let posizioneRandomCognomeJS23 = Math.floor(Math.random() * listaCognomiJS23.length);
-let cognomeRandomJS23 = listaCognomiJS23[posizioneRandomCognomeJS23];
+// Definisco un contatore degli invitati
+let contatoreInvitatiJS23 = 1;
 
-// Genero un nome + cognome casuale
-let nomeCognomeRandomJS23 = nomeRandomJS23 + ' ' + cognomeRandomJS23;
+// Definisco una variabile per un invitato con nome e cognome random
+let invitatoRandomJS23
 
-console.log(nomeCognomeRandomJS23);
+// Definisco un array, inizialmente vuoto, per le combinazioni nome+cognome che genererò
+let listaInvitatiRandomJS23 = [];
+
+while (contatoreInvitatiJS23 <= numeroInvitatiRandomJS23) {
+    // Pesco un nome a caso dall'array dei nomi
+    let posizioneRandomNomeJS23 = Math.floor(Math.random() * listaNomiJS23.length);
+    let nomeRandomJS23 = listaNomiJS23[posizioneRandomNomeJS23];
+    
+    // Pesco un cognome a caso dall'array dei cognomi
+    let posizioneRandomCognomeJS23 = Math.floor(Math.random() * listaCognomiJS23.length);
+    let cognomeRandomJS23 = listaCognomiJS23[posizioneRandomCognomeJS23];
+    
+    // Genero un nome + cognome casuale
+    invitatoRandomJS23 = nomeRandomJS23 + ' ' + cognomeRandomJS23;
+
+    // Incremento il contatore
+    contatoreInvitatiJS23++;
+
+    // Inserisco i nomi generati in un array
+    listaInvitatiRandomJS23.push(invitatoRandomJS23);
+  
+}
+
+
+// Stampo i nomi generati
+document.getElementById('js23-output').innerHTML = `${listaInvitatiRandomJS23[0]}<br>${listaInvitatiRandomJS23[1]}<br>${listaInvitatiRandomJS23[2]}`;
 
 
 }
