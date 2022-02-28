@@ -873,27 +873,14 @@ while (listaInvitatiRandomJS23.length < numeroInvitatiRandomJS23) {
     // Genero un nome + cognome casuale
     invitatoRandomJS23 = nomeRandomJS23 + ' ' + cognomeRandomJS23;
 
-    // Incremento il contatore
-    contatoreInvitatiJS23++;
+    // Genero una condizione IF per confrontare il nome casuale con i nomi reali, in quanto il mio obiettivo è che i nomi casuali siano diversi da quelli reali
+    if (!nomiCognomiRealiJS23.includes(invitatoRandomJS23)) {
+        // Incremento il contatore
+        contatoreInvitatiJS23++;
 
-    // Inserisco i nomi generati in un array
-    listaInvitatiRandomJS23.push(invitatoRandomJS23);
-
-
-/*
-BONUS PERSONALE DA IMPLEMENTARE
-Voglio effettuare un controllo tra i nomi generati e quelli reali.
-Non sono interessato alle combinazioni reali, e quindi non voglio inserirle nell'array degli invitati random.
-
-if (nomiCognomiRealiJS23.includes(invitatoRandomJS23)) {
-    contatoreInvitatiJS23++;
-    // Inserisco i nomi generati in un array
-    listaInvitatiRandomJS23.push(invitatoRandomJS23);
-} else {
-    primo dubbio: è necessario l'else?
-    secondo dubbio: come simulo il caso di uguaglianza per testare la funzione?
-}
-*/
+        // Inserisco i nomi generati in un array
+        listaInvitatiRandomJS23.push(invitatoRandomJS23);
+    }
   
 }
 
