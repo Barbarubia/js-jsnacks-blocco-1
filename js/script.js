@@ -71,24 +71,24 @@ divJS1.classList.remove('display-none');
 // VERSIONE CON PROMPT E ALERT
 
 // Chiedo all'utente di inserire un numero
-let numero1JS1 = parseInt(prompt('Digita un numero'));
+let numero1 = parseInt(prompt('Digita un numero'));
 
 // Chiedo all'utente di inserire un altro numero
-let numero2JS1 = parseInt(prompt('Digita un altro numero'));
+let numero2 = parseInt(prompt('Digita un altro numero'));
 
 // Definisco l'elemento HTML dove stamperò il risultato finale
-let outputAreaJS1 = document.getElementById('js1-output');
+let outputArea = document.getElementById('js1-output');
 
 
 // Genero un ciclo IF per confrontare i 2 numeri e visualizzare un popup con il numero più alto oppure un avviso che i 2 numeri sono uguali.
-if (isNaN(numero1JS1) || isNaN(numero2JS1)) {
-    outputAreaJS1.innerHTML = `Devi inserire dei valori numerici`;  
-} else if (numero1JS1 == numero2JS1) {
-    outputAreaJS1.innerHTML = `I due numeri inseriti sono uguali`;
-} else if (numero1JS1 > numero2JS1) {
-    outputAreaJS1.innerHTML = `Il primo numero inserito è ${numero1JS1}.<br>Il secondo numero inserito è ${numero2JS1}.<br>${numero1JS1} è il numero più grande.`;
+if (isNaN(numero1) || isNaN(numero2)) {
+    outputArea.innerHTML = `Devi inserire dei valori numerici`;  
+} else if (numero1 == numero2) {
+    outputArea.innerHTML = `I due numeri inseriti sono uguali`;
+} else if (numero1 > numero2) {
+    outputArea.innerHTML = `Il primo numero inserito è ${numero1}.<br>Il secondo numero inserito è ${numero2}.<br>${numero1} è il numero più grande.`;
 } else {
-    outputAreaJS1.innerHTML = `Il primo numero inserito è ${numero1JS1}.<br>Il secondo numero inserito è ${numero2JS1}.<br>${numero2JS1} è il numero più grande.`;
+    outputArea.innerHTML = `Il primo numero inserito è ${numero1}.<br>Il secondo numero inserito è ${numero2}.<br>${numero2} è il numero più grande.`;
 }
 
 // FINE VERSIONE CON PROMPT E ALERT
@@ -97,30 +97,30 @@ if (isNaN(numero1JS1) || isNaN(numero2JS1)) {
 // VERSIONE HTML CON INPUT
 /*
 // Seleziono gli elementi HTML in cui l'utente inserisce i due numeri richiesti
-let numero1BoxJS1 = document.getElementById('js1-number1');
-let numero2BoxJS1 = document.getElementById('js1-number2');
+let numero1Box = document.getElementById('js1-number1');
+let numero2Box = document.getElementById('js1-number2');
 // Definisco due variabili, inizialmente vuote, per i numeri inseriti dall'utente
-let numeroInserito1JS1 = '';
-let numeroInserito2JS1 = '';
+let numeroInserito1 = '';
+let numeroInserito2 = '';
 // Definisco l'elemento bottone HTML che effettua il confronto tra i due numeri
-let buttonConfrontaJS1 = document.getElementById('js1-confronta');
+let buttonConfronta = document.getElementById('js1-confronta');
 // Definisco l'area HTML in cui stamperò il risultato del confronto
-let outputAreaJS1 = document.getElementById('js1-output');
+let outputArea = document.getElementById('js1-output');
 
 // Genero l'evento al click sul bottone di confronto
-buttonConfrontaJS1.addEventListener('click', function () {
+buttonConfronta.addEventListener('click', function () {
     // Leggo i numeri inseriti dall'utente e li sovrascrivo alla variabile numeroInserito
-    numeroInserito1JS1 = numero1BoxJS1.value;
-    numeroInserito2JS1 = numero2BoxJS1.value;
+    numeroInserito1 = numero1Box.value;
+    numeroInserito2 = numero2Box.value;
     // Se i dati inseriti non sono valori numerici...
-    if (isNaN(numeroInserito1JS1) || isNaN(numeroInserito2JS1)) {
-        outputAreaJS1.innerHTML = `Devi inserire dei valori numerici`;
-    } else if (numeroInserito1JS1 > numeroInserito2JS1) {
-        outputAreaJS1.innerHTML = `${numeroInserito1JS1} è il numero più grande`;
-    } else if (numeroInserito1JS1 < numeroInserito2JS1) {
-        outputAreaJS1.innerHTML = `${numeroInserito2JS1} è il numero più grande`;
+    if (isNaN(numeroInserito1) || isNaN(numeroInserito2)) {
+        outputArea.innerHTML = `Devi inserire dei valori numerici`;
+    } else if (numeroInserito1 > numeroInserito2) {
+        outputArea.innerHTML = `${numeroInserito1} è il numero più grande`;
+    } else if (numeroInserito1 < numeroInserito2) {
+        outputArea.innerHTML = `${numeroInserito2} è il numero più grande`;
     } else {
-        outputAreaJS1.innerHTML = `I due numeri inseriti sono uguali`;
+        outputArea.innerHTML = `I due numeri inseriti sono uguali`;
     }
 }
 )
@@ -159,26 +159,26 @@ divJS23.classList.add('display-none');
 divJS2.classList.remove('display-none');
 
 // Chiedo all'utente di scrivere una parola
-let word1JS2 = prompt(`Scrivi una parola:`);
+let word1 = prompt(`Scrivi una parola:`);
 
 // Chiedo all'utente di scrivere un'altra parola
-let word2JS2 = prompt(`Scrivi un'altra parola:`);
+let word2 = prompt(`Scrivi un'altra parola:`);
 
 // Seleziono l'id html dove stamperò il messaggio
-let messageJS2 = document.getElementById('js2-word');
+let message = document.getElementById('js2-word');
 
 // Definisco una variabile per avvisare l'utente che può usare esclusivamente caratteri alfabetici
-var caratteriConsentitiJS2 = /^[a-zA-Z]+$/;
+var caratteriConsentiti = /^[a-zA-Z]+$/;
 
 // Genero un ciclo IF per confrontare la lunghezza delle parole inserite e stampare a video le parole in ordine di lunghezza (prima la più corta) o un avviso che la lunghezza è la stessa
-if (caratteriConsentitiJS2.test(word1JS2) == false || caratteriConsentitiJS2.test(word2JS2) == false) {
-    messageJS2.innerHTML = `Puoi inserire soltanto caratteri alfabetici senza spazi`;
-} else if (word1JS2.length == word2JS2.length) {
-    messageJS2.innerHTML = `Le parole "${word1JS2}" e "${word2JS2}" hanno la stessa lunghezza (${word1JS2.length} caratteri).`;
-} else if (word1JS2.length > word2JS2.length) {
-    messageJS2.innerHTML = `Le parole inserite, in ordine di lunghezza dalla più corta alla più lunga, sono:<br>"${word2JS2}" (${word2JS2.length} caratteri)<br>"${word1JS2}" (${word1JS2.length} caratteri)`;
+if (caratteriConsentiti.test(word1) == false || caratteriConsentiti.test(word2) == false) {
+    message.innerHTML = `Puoi inserire soltanto caratteri alfabetici senza spazi`;
+} else if (word1.length == word2.length) {
+    message.innerHTML = `Le parole "${word1}" e "${word2}" hanno la stessa lunghezza (${word1.length} caratteri).`;
+} else if (word1.length > word2.length) {
+    message.innerHTML = `Le parole inserite, in ordine di lunghezza dalla più corta alla più lunga, sono:<br>"${word2}" (${word2.length} caratteri)<br>"${word1}" (${word1.length} caratteri)`;
 } else {
-    messageJS2.innerHTML = `Le parole inserite, in ordine di lunghezza dalla più corta alla più lunga, sono:<br>"${word1JS2}" (${word1JS2.length} caratteri)<br>"${word2JS2}" (${word2JS2.length} caratteri)`;
+    message.innerHTML = `Le parole inserite, in ordine di lunghezza dalla più corta alla più lunga, sono:<br>"${word1}" (${word1.length} caratteri)<br>"${word2}" (${word2.length} caratteri)`;
 }
 }
 
@@ -212,16 +212,16 @@ divJS23.classList.add('display-none');
 divJS3.classList.remove('display-none');
 
 // definisco una variabile con valore iniziale uguale a 0
-let sumNumbersJS3 = 0;
+let sumNumbers = 0;
 
 // Genero un ciclo FOR che chiede all'utente di inserire "i" numeri e ad ogni interazione incremento la variabile sumNumbers aggiungendo il numero inserito
-for (iJS3 = 1; iJS3 <= 10; iJS3++) {
-    let numberJS3 = parseInt(prompt("inserisci un numero:"));
-    sumNumbersJS3 += numberJS3;
+for (i = 1; i <= 10; i++) {
+    let number = parseInt(prompt("inserisci un numero:"));
+    sumNumbers += number;
 }
 
 // Stampo a video il risultato della somma degli "i" elementi
-document.getElementById('js3-sum').innerHTML = `La somma dei numeri inseriti è ${sumNumbersJS3}.`;
+document.getElementById('js3-sum').innerHTML = `La somma dei numeri inseriti è ${sumNumbers}.`;
 }
 
 // FINE JSNACK 3
@@ -255,7 +255,7 @@ divJS23.classList.add('display-none');
 divJS4.classList.remove('display-none');
 
 // Definisco l'array con la lista degli invitati (= componenti della classe 56: studenti e prof)
-const listaInvitatiJS4 = [
+const listaInvitati = [
     "Adelin Dumitru Tanasa",
     "Aldo Cocurullo",
     "Alessandro Ballabio",
@@ -299,43 +299,43 @@ const listaInvitatiJS4 = [
 ]
 
 // Definisco l'elemento HTML in cui l'utente immette il nome
-let insertNameBoxJS4 = document.getElementById('js4-name');
+let insertNameBox = document.getElementById('js4-name');
 // Definisco l'elemento HTML in cui l'utente immette il cognome
-let insertSurnameBoxJS4 = document.getElementById('js4-surname');
+let insertSurnameBox = document.getElementById('js4-surname');
 // Definisco l'elemento bottone HTML che fa partire la funzione al click
-let buttonVerifyJS4 = document.getElementById('js4-verify');
+let buttonVerify = document.getElementById('js4-verify');
 // Definisco l'area HTML in cui stamperò il risultato della funzione
-let outputAreaJS4 = document.getElementById('js4-output');
+let outputArea = document.getElementById('js4-output');
 
 // Genero l'evento al click sul bottone per verificare il nome e il cognome inseriti
-buttonVerifyJS4.addEventListener('click', function () {
+buttonVerify.addEventListener('click', function () {
     // Leggo il nome inserito dall'utente
-    let userNameJS4 = insertNameBoxJS4.value;
+    let userName = insertNameBox.value;
     // Leggo il cognome inserito dall'utente
-    let userSurnameJS4 = insertSurnameBoxJS4.value;
+    let userSurname = insertSurnameBox.value;
     // Unisco nome e cognome dell'utente
-    let userNameSurnameJS4 = `${userNameJS4} ${userSurnameJS4}`;
+    let userNameSurname = `${userName} ${userSurname}`;
 
     // Creo una variabile per verificare la presenza in lista con valore iniziale uguale a FALSO
-    let isUserPresentJS4 = false;
+    let isUserPresent = false;
 
     // Genero un ciclo FOR che confronta il nome e cognome dell'utente con la lista degli invitati e, se lo trova trasforma in VERO la variabile creata
-    for (let invitatoJS4 = 0; invitatoJS4 < listaInvitatiJS4.length; invitatoJS4++) {
-        if (listaInvitatiJS4[invitatoJS4].toLowerCase() == userNameSurnameJS4.toLowerCase()) {
-            isUserPresentJS4 = true;
+    for (let invitato = 0; invitato < listaInvitati.length; invitato++) {
+        if (listaInvitati[invitato].toLowerCase() == userNameSurname.toLowerCase()) {
+            isUserPresent = true;
         }
     }
 
     // Genero una condizione IF che stampa a video se l'utente è invitato alla festa oppure no
-    if (isUserPresentJS4 == true) {
-        outputAreaJS4.innerHTML = `Ciao <span class="capitalize">${userNameJS4}</span>!<br>Sei nella lista degli invitati.<br>BUON DIVERTIMENTO!`;
+    if (isUserPresent == true) {
+        outputArea.innerHTML = `Ciao <span class="capitalize">${userName}</span>!<br>Sei nella lista degli invitati.<br>BUON DIVERTIMENTO!`;
     } else {
-        outputAreaJS4.innerHTML = `Mi dispiace, <span class="capitalize">${userNameJS4}</span>.<br>Non sei nella lista degli invitati.`;
+        outputArea.innerHTML = `Mi dispiace, <span class="capitalize">${userName}</span>.<br>Non sei nella lista degli invitati.`;
     }
 
     // Cancello i dati inseriti negli input
-    insertNameBoxJS4.value = '';
-    insertSurnameBoxJS4.value= '';
+    insertNameBox.value = '';
+    insertSurnameBox.value= '';
 }
 )
 }
@@ -369,23 +369,23 @@ divJS23.classList.add('display-none');
 divJS5.classList.remove('display-none');
 
 // Creo un array vuoto
-let arrayJS5 = [];
+let array = [];
 
 // Stabilisco quante volte voglio chiedere all'utente di inserire un numero (ovvero da quanti elementi dovrà essere composto l'array alla fine)
-const numElementiJS5 = 6;
+const numElementi = 6;
 
 // Genero un ciclo FOR che chiede all'utente di immettere un valore numerico per il numero di volte già stabilito
 // Ogni valore immesso diventa un elemento dell'array
-for (let inserisciJS5 = 1; inserisciJS5 <= numElementiJS5; inserisciJS5++) {
-    let numberJS5 = parseInt(prompt('Inserisci un numero'));
+for (let inserisci = 1; inserisci <= numElementi; inserisci++) {
+    let number = parseInt(prompt('Inserisci un numero'));
     // Genero una condizione IF: se il numero inserito è dispari, lo inserisco nell'array
-    if (numberJS5 % 2 == 1) {
-        arrayJS5.push(numberJS5);
+    if (number % 2 == 1) {
+        array.push(number);
     }
 }
 
 // Stampo a video l'elenco degli elementi inseriti nell'array
-document.getElementById('js5-array').innerHTML = arrayJS5;
+document.getElementById('js5-array').innerHTML = `L'array è composto dai seguenti elementi:<br> [${array}]`;
 }
 
 // FINE JSnack 5
@@ -420,42 +420,42 @@ divJS23.classList.add('display-none');
 divJS6.classList.remove('display-none');
 
 // Seleziono l'elemento HTML in cui l'utente inserisce il numero
-let inputBoxJS6 = document.getElementById('js6-number');
+let inputBox = document.getElementById('js6-number');
 
 // Seleziono l'elemento HTML bottone che al click selezionerà il calcolo richiesto
-let calcButtonJS6 = document.getElementById('js6-calculate');
+let calcButton = document.getElementById('js6-calculate');
 
 // Seleziono l'elemento HTML in cui visualizzerò il risultato
-let outputAreaJS6 = document.getElementById('js6-output');
+let outputArea = document.getElementById('js6-output');
 
 // Definisco una variabile che userò per richiamare per il numero inserito dall'utente
-let numeroInseritoJS6 = '';
+let numeroInserito = '';
 
 // Creo una variabile somma con valore iniziale pari a zero
-let sommaJS6 = 0
+let somma = 0
 
 // Genero la funzione al click sul bottone
-calcButtonJS6.addEventListener('click', function () {
+calcButton.addEventListener('click', function () {
     
     // Attribuisco alla variabile numeroInserito il valore del numero immesso dall'utente
-    numeroInseritoJS6 = inputBoxJS6.value;
+    numeroInserito = inputBox.value;
    
 
     // Genero un avviso se il numero è composto da meno di 4 cifre
-    if (numeroInseritoJS6.length != 4) {
-        outputAreaJS6.innerHTML = `Devi inserire un numero di 4 cifre numeriche`;
+    if (numeroInserito.length != 4) {
+        outputArea.innerHTML = `Devi inserire un numero di 4 cifre numeriche`;
     } else {
         // Genero un ciclo FOR con un contatore che pesca le singole cifre del numero inserito e le aggiunge al valore precedente della variabile somma precedentemente creata
-        for (let contatoreJS6 = 0; contatoreJS6 < numeroInseritoJS6.length; contatoreJS6++) {
-            sommaJS6 += parseInt(numeroInseritoJS6[contatoreJS6]);
+        for (let contatore = 0; contatore < numeroInserito.length; contatore++) {
+            somma += parseInt(numeroInserito[contatore]);
         }
 
         // Stampo il risultato a video
-        outputAreaJS6.innerHTML = `La somma delle cifre inserite è ${sommaJS6}!`
+        outputArea.innerHTML = `La somma delle cifre inserite è ${somma}!`
         }
 
         // Resetto il valore di somma a zero
-        sommaJS6 = 0;
+        somma = 0;
 
 }
 )
@@ -491,31 +491,31 @@ divJS23.classList.add('display-none');
 divJS19.classList.remove('display-none');
 
 // Definisco il numero di elementi
-const numElementsJS19 = 10;
+const numElements = 10;
 
 // Definisco il valore minimo = 1
-const minNumJS19 = 1;
+const minNum = 1;
 
 // Definisco il valore massimo = 10
-const maxNumJS19 = 10;
+const maxNum = 10;
 
 // Definisco la variabile somma con valore iniziale pari a 0
-let sumJS19 = 0;
+let sum = 0;
 
 // Definisco una variabile contatore con valore iniziale pari al valore minimo e la userò per il ciclo while
-let contatoreJS19 = minNumJS19;
+let contatore = minNum;
 
 // Genero un ciclo while che incrementa di volta in volta il valore della variabile somma
-while (contatoreJS19 <= maxNumJS19) {
-    sumJS19 += contatoreJS19;
-    contatoreJS19++;
+while (contatore <= maxNum) {
+    sum += contatore;
+    contatore++;
 }
 
 // Definisco una variabile per il calcolo della media
-let avarageJS19 = sumJS19 / numElementsJS19;
+let avarage = sum / numElements;
 
 // Stampo a video il risultato della somma e della media
-document.getElementById('js19-output').innerHTML = `La somma dei numeri da ${minNumJS19} a ${maxNumJS19} è ${sumJS19}, mentre il loro valore medio è ${avarageJS19}.`;
+document.getElementById('js19-output').innerHTML = `La somma dei numeri da ${minNum} a ${maxNum} è ${sum}, mentre il loro valore medio è ${avarage}.`;
 
 }
 
@@ -556,32 +556,32 @@ divJS23.classList.add('display-none');
 divJS21.classList.remove('display-none');
 
 // Definisco quante volte voglio che il programma chieda all'utente di inserire un numero tramite prompt
-let numPromptsJS21 = 5;
+let numPrompts = 5;
 
 // Definisco una variabile contatore che parte da 1 per il numero di prompts
-let contatoreJS21 = 1;
+let contatore = 1;
 
 // Definisco una variabile somma con valore iniziale pari a zero
-let sumJS21 = 0;
+let sum = 0;
 
 // Definisco l'elemento HTML dove stamperò il risultato
-let outputAreaJS21 = document.getElementById('js21-output');
+let outputArea = document.getElementById('js21-output');
 
 // Genero un ciclo while che chiede "n" volte all'utente di inserire un numero e effettua la somma
-while (contatoreJS21 <= numPromptsJS21) {
+while (contatore <= numPrompts) {
     // Chiedo all'utente di inserire un numero
-    let numeroInseritoJS21 = parseInt(prompt('Digita un numero'));
+    let numeroInserito = parseInt(prompt('Digita un numero'));
     // Incremento il valore della variabile somma con il numero inserito
-    sumJS21 += numeroInseritoJS21;
+    sum += numeroInserito;
     // Incremento il contatore
-    contatoreJS21++;
+    contatore++;
 }
 
 // Verifico con una condizione IF se il valore ottenuto è numerico e, se true, stampo il risultato a video
-if (!isNaN(sumJS21)) {
-    outputAreaJS21.innerHTML = `La somma dei numeri inseriti è ${sumJS21}!`;
+if (!isNaN(sum)) {
+    outputArea.innerHTML = `La somma dei numeri inseriti è ${sum}!`;
 } else {
-    outputAreaJS21.innerHTML = `Sono accettati esclusivamente input numerici.`;
+    outputArea.innerHTML = `Sono accettati esclusivamente input numerici.`;
 }
 
 }
@@ -618,25 +618,25 @@ divJS23.classList.add('display-none');
 divJS21b.classList.remove('display-none');
 
 // Definisco quante volte voglio che il programma chieda all'utente di inserire un numero tramite prompt
-let numPromptsJS21b = 5;
+let numPrompts = 5;
 
 // Definisco una variabile somma con valore iniziale pari a zero
-let sumJS21b = 0;
+let sum = 0;
 
 // Definisco l'elemento HTML dove stamperò il risultato
-let outputAreaJS21b = document.getElementById('js21b-output');
+let outputArea = document.getElementById('js21b-output');
 
 // Genero un ciclo for che chiede "n" volte all'utente di inserire un numero e effettua la somma
-for (let contatoreJS21b = 1; contatoreJS21b <= numPromptsJS21b; contatoreJS21b++) {
-    let numeroInseritoJS21b = parseInt(prompt('Digita un numero'));
-    sumJS21b += numeroInseritoJS21b;
+for (let contatore = 1; contatore <= numPrompts; contatore++) {
+    let numeroInserito = parseInt(prompt('Digita un numero'));
+    sum += numeroInserito;
 }
 
 // Verifico con una condizione IF se il valore ottenuto è numerico e, se true, stampo il risultato a video
-if (!isNaN(sumJS21b)) {
-    outputAreaJS21b.innerHTML = `La somma dei numeri inseriti è ${sumJS21b}!`;
+if (!isNaN(sum)) {
+    outputArea.innerHTML = `La somma dei numeri inseriti è ${sum}!`;
 } else {
-    outputAreaJS21b.innerHTML = `Sono accettati esclusivamente input numerici.`;
+    outputArea.innerHTML = `Sono accettati esclusivamente input numerici.`;
 }
 
 }
@@ -674,18 +674,18 @@ divJS23.classList.add('display-none');
 divJS22.classList.remove('display-none');
 
 // Chiedo all'utente di digitare un numero intero
-let numInseritoJS22 = prompt('Digita un numero intero');
+let numInserito = prompt('Digita un numero intero');
 
 // Definisco l'elemento HTML dove stampo il risultato
-let outputAreaJS22 = document.getElementById('js22-output');
+let outputArea = document.getElementById('js22-output');
 
-if (isNaN(numInseritoJS22) || (numInseritoJS22 - parseInt(numInseritoJS22) != 0)) {
-    outputAreaJS22.innerHTML = `Devi digitare un valore numerico intero.`;
-} else if (numInseritoJS22 % 2 == 0) {
-    outputAreaJS22.innerHTML = `Hai digitato il numero ${numInseritoJS22}, che è un numero pari.`;
+if (isNaN(numInserito) || (numInserito - parseInt(numInserito) != 0)) {
+    outputArea.innerHTML = `Devi digitare un valore numerico intero.`;
+} else if (numInserito % 2 == 0) {
+    outputArea.innerHTML = `Hai digitato il numero ${numInserito}, che è un numero pari.`;
 } else {
-    numInseritoJS22++
-    outputAreaJS22.innerHTML = `Il numero che hai digitato è dispari. Il numero successivo a quello digitato è ${numInseritoJS22}, che è un numero pari.`;
+    numInserito++
+    outputArea.innerHTML = `Il numero che hai digitato è dispari. Il numero successivo a quello digitato è ${numInserito}, che è un numero pari.`;
 }
 
 }
@@ -722,7 +722,7 @@ divJS23.classList.remove('display-none');
 
 // Definisco un array con la lista di nomi
 
-const listaNomiJS23 = [
+const listaNomi = [
     "Adelin Dumitru",
     "Aldo",
     "Alessandro",
@@ -764,7 +764,7 @@ const listaNomiJS23 = [
 
 // Definisco un array con la lista di cognomi
 
-const listaCognomiJS23 = [
+const listaCognomi = [
     "Tanasa",
     "Cocurullo",
     "Ballabio",
@@ -806,7 +806,7 @@ const listaCognomiJS23 = [
     "Stortini"
 ]
 
-const nomiCognomiRealiJS23 = [
+const nomiCognomiReali = [
     "Adelin Dumitru Tanasa",
     "Aldo Cocurullo",
     "Alessandro Ballabio",
@@ -850,37 +850,37 @@ const nomiCognomiRealiJS23 = [
 ]
 
 // Definisco quanti nomi casuali voglio generare
-const numeroInvitatiRandomJS23 = 3;
+const numeroInvitatiRandom = 3;
 
 // Definisco un contatore degli invitati
-let contatoreInvitatiJS23 = 1;
+let contatoreInvitati = 1;
 
 // Definisco una variabile per un invitato con nome e cognome random
-let invitatoRandomJS23
+let invitatoRandom
 
 // Definisco un array, inizialmente vuoto, per le combinazioni nome+cognome che genererò
-let listaInvitatiRandomJS23 = [];
+let listaInvitatiRandom = [];
 
-while (listaInvitatiRandomJS23.length < numeroInvitatiRandomJS23) {
+while (listaInvitatiRandom.length < numeroInvitatiRandom) {
     // Pesco un nome a caso dall'array dei nomi
-    let posizioneRandomNomeJS23 = Math.floor(Math.random() * listaNomiJS23.length);
-    let nomeRandomJS23 = listaNomiJS23[posizioneRandomNomeJS23];
+    let posizioneRandomNome = Math.floor(Math.random() * listaNomi.length);
+    let nomeRandom = listaNomi[posizioneRandomNome];
     
     // Pesco un cognome a caso dall'array dei cognomi
-    let posizioneRandomCognomeJS23 = Math.floor(Math.random() * listaCognomiJS23.length);
-    let cognomeRandomJS23 = listaCognomiJS23[posizioneRandomCognomeJS23];
+    let posizioneRandomCognome = Math.floor(Math.random() * listaCognomi.length);
+    let cognomeRandom = listaCognomi[posizioneRandomCognome];
     
     // Genero un nome + cognome casuale
-    invitatoRandomJS23 = nomeRandomJS23 + ' ' + cognomeRandomJS23;
+    invitatoRandom = nomeRandom + ' ' + cognomeRandom;
 
     // Genero una condizione IF per confrontare il nome casuale con i nomi reali, in quanto il mio obiettivo è che i nomi casuali siano diversi da quelli reali
     // Inoltre (2nda condizione if) verifico che non ci siano combinazioni random identiche
-    if (!nomiCognomiRealiJS23.includes(invitatoRandomJS23) && !listaInvitatiRandomJS23.includes(invitatoRandomJS23)) {
+    if (!nomiCognomiReali.includes(invitatoRandom) && !listaInvitatiRandom.includes(invitatoRandom)) {
         // Incremento il contatore
-        contatoreInvitatiJS23++;
+        contatoreInvitati++;
 
         // Inserisco i nomi generati nell'array delle combinazioni random
-        listaInvitatiRandomJS23.push(invitatoRandomJS23);
+        listaInvitatiRandom.push(invitatoRandom);
     }
   
 }
@@ -888,7 +888,7 @@ while (listaInvitatiRandomJS23.length < numeroInvitatiRandomJS23) {
 
 
 // Stampo i nomi generati
-document.getElementById('js23-output').innerHTML = `${listaInvitatiRandomJS23[0]}<br>${listaInvitatiRandomJS23[1]}<br>${listaInvitatiRandomJS23[2]}`;
+document.getElementById('js23-output').innerHTML = `Gatsby ha generato la seguente lista di nomi falsi:<ul><li>${listaInvitatiRandom[0]}</li><li>${listaInvitatiRandom[1]}</li><li>${listaInvitatiRandom[2]}</li></ul>`;
 
 
 }
