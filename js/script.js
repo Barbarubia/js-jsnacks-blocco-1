@@ -7,6 +7,7 @@ let buttonJS5 = document.getElementById('button-active-js5');
 let buttonJS6 = document.getElementById('button-active-js6');
 let buttonJS19 = document.getElementById('button-active-js19');
 let buttonJS21 = document.getElementById('button-active-js21');
+let buttonJS21b = document.getElementById('button-active-js21b');
 let buttonJS22 = document.getElementById('button-active-js22');
 let buttonJS23 = document.getElementById('button-active-js23');
 
@@ -20,6 +21,7 @@ buttonJS5.addEventListener('click', functionJSnack5);
 buttonJS6.addEventListener('click', functionJSnack6);
 buttonJS19.addEventListener('click', functionJSnack19);
 buttonJS21.addEventListener('click', functionJSnack21);
+buttonJS21b.addEventListener('click', functionJSnack21b);
 // buttonJS22.addEventListener('click', functionJSnack22);
 // buttonJS23.addEventListener('click', functionJSnack23);
 
@@ -32,6 +34,7 @@ let divJS5 = document.querySelector('.jsnack-05');
 let divJS6 = document.querySelector('.jsnack-06');
 let divJS19 = document.querySelector('.jsnack-19');
 let divJS21 = document.querySelector('.jsnack-21');
+let divJS21b = document.querySelector('.jsnack-21b');
 let divJS22 = document.querySelector('.jsnack-22');
 let divJS23 = document.querySelector('.jsnack-23');
 
@@ -59,6 +62,7 @@ divJS5.classList.add('display-none');
 divJS6.classList.add('display-none');
 divJS19.classList.add('display-none');
 divJS21.classList.add('display-none');
+divJS21b.classList.add('display-none');
 divJS22.classList.add('display-none');
 divJS23.classList.add('display-none');
 
@@ -148,6 +152,7 @@ divJS5.classList.add('display-none');
 divJS6.classList.add('display-none');
 divJS19.classList.add('display-none');
 divJS21.classList.add('display-none');
+divJS21b.classList.add('display-none');
 divJS22.classList.add('display-none');
 divJS23.classList.add('display-none');
 
@@ -200,6 +205,7 @@ divJS5.classList.add('display-none');
 divJS6.classList.add('display-none');
 divJS19.classList.add('display-none');
 divJS21.classList.add('display-none');
+divJS21b.classList.add('display-none');
 divJS22.classList.add('display-none');
 divJS23.classList.add('display-none');
 
@@ -242,6 +248,7 @@ divJS5.classList.add('display-none');
 divJS6.classList.add('display-none');
 divJS19.classList.add('display-none');
 divJS21.classList.add('display-none');
+divJS21b.classList.add('display-none');
 divJS22.classList.add('display-none');
 divJS23.classList.add('display-none');
 
@@ -355,6 +362,7 @@ divJS5.classList.add('display-none');
 divJS6.classList.add('display-none');
 divJS19.classList.add('display-none');
 divJS21.classList.add('display-none');
+divJS21b.classList.add('display-none');
 divJS22.classList.add('display-none');
 divJS23.classList.add('display-none');
 
@@ -405,6 +413,7 @@ divJS5.classList.add('display-none');
 divJS6.classList.add('display-none');
 divJS19.classList.add('display-none');
 divJS21.classList.add('display-none');
+divJS21b.classList.add('display-none');
 divJS22.classList.add('display-none');
 divJS23.classList.add('display-none');
 
@@ -475,6 +484,7 @@ divJS5.classList.add('display-none');
 divJS6.classList.add('display-none');
 divJS19.classList.add('display-none');
 divJS21.classList.add('display-none');
+divJS21b.classList.add('display-none');
 divJS22.classList.add('display-none');
 divJS23.classList.add('display-none');
 
@@ -521,7 +531,7 @@ document.getElementById('js19-output').innerHTML = `La somma dei numeri da ${min
 
 
 /*
-INIZIO JSNACK 2.1
+INIZIO JSNACK 2.1 (WHILE)
 
 Il software deve chiedere per 5 volte all’utente di inserire un numero.
 Il programma stampa la somma di tutti i numeri inseriti.
@@ -539,10 +549,11 @@ divJS5.classList.add('display-none');
 divJS6.classList.add('display-none');
 divJS19.classList.add('display-none');
 divJS21.classList.add('display-none');
+divJS21b.classList.add('display-none');
 divJS22.classList.add('display-none');
 divJS23.classList.add('display-none');
 
-// Abilito la visualizzazione dello JSnack 2.1 rimuovendo la classe display-none
+// Abilito la visualizzazione dello JSnack 2.1 (while) rimuovendo la classe display-none
 divJS21.classList.remove('display-none');
 
 // Definisco quante volte voglio che il programma chieda all'utente di inserire un numero tramite prompt
@@ -576,4 +587,59 @@ if (!isNaN(sumJS21)) {
 
 }
 
-// FINE JSNACK 2.1
+// FINE JSNACK 2.1 (WHILE)
+
+
+
+
+/*
+INIZIO JSNACK 2.1 (FOR)
+
+Il software deve chiedere per 5 volte all’utente di inserire un numero.
+Il programma stampa la somma di tutti i numeri inseriti.
+Esegui questo programma in due versioni, con il for e con il while.
+*/
+
+function functionJSnack21b() {
+    
+// Pulisco la sezione main dell'HTML da eventuali precedenti JSnacks visualizzati
+divJS1.classList.add('display-none');
+divJS2.classList.add('display-none');
+divJS3.classList.add('display-none');
+divJS4.classList.add('display-none');
+divJS5.classList.add('display-none');
+divJS6.classList.add('display-none');
+divJS19.classList.add('display-none');
+divJS21.classList.add('display-none');
+divJS21b.classList.add('display-none');
+divJS22.classList.add('display-none');
+divJS23.classList.add('display-none');
+
+// Abilito la visualizzazione dello JSnack 2.1 (for) rimuovendo la classe display-none
+divJS21b.classList.remove('display-none');
+
+// Definisco quante volte voglio che il programma chieda all'utente di inserire un numero tramite prompt
+let numPromptsJS21b = 5;
+
+// Definisco una variabile somma con valore iniziale pari a zero
+let sumJS21b = 0;
+
+// Definisco l'elemento HTML dove stamperò il risultato
+let outputAreaJS21b = document.getElementById('js21b-output');
+
+// Genero un ciclo for che chiede "n" volte all'utente di inserire un numero e effettua la somma
+for (let contatoreJS21b = 1; contatoreJS21b <= numPromptsJS21b; contatoreJS21b++) {
+    let numeroInseritoJS21b = parseInt(prompt('Digita un numero'));
+    sumJS21b += numeroInseritoJS21b;
+}
+
+// Verifico con una condizione IF se il valore ottenuto è numerico e, se true, stampo il risultato a video
+if (!isNaN(sumJS21b)) {
+    outputAreaJS21b.innerHTML = `La somma dei numeri inseriti è ${sumJS21b}!`;
+} else {
+    outputAreaJS21b.innerHTML = `Sono accettati esclusivamente input numerici.`;
+}
+
+}
+
+// FINE JSNACK 2.1 (FOR)
