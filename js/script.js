@@ -861,7 +861,7 @@ let invitatoRandomJS23
 // Definisco un array, inizialmente vuoto, per le combinazioni nome+cognome che genererò
 let listaInvitatiRandomJS23 = [];
 
-while (contatoreInvitatiJS23 <= numeroInvitatiRandomJS23) {
+while (listaInvitatiRandomJS23.length < numeroInvitatiRandomJS23) {
     // Pesco un nome a caso dall'array dei nomi
     let posizioneRandomNomeJS23 = Math.floor(Math.random() * listaNomiJS23.length);
     let nomeRandomJS23 = listaNomiJS23[posizioneRandomNomeJS23];
@@ -878,8 +878,25 @@ while (contatoreInvitatiJS23 <= numeroInvitatiRandomJS23) {
 
     // Inserisco i nomi generati in un array
     listaInvitatiRandomJS23.push(invitatoRandomJS23);
+
+
+/*
+BONUS PERSONALE DA IMPLEMENTARE
+Voglio effettuare un controllo tra i nomi generati e quelli reali.
+Non sono interessato alle combinazioni reali, e quindi non voglio inserirle nell'array degli invitati random.
+
+if (nomiCognomiRealiJS23.includes(invitatoRandomJS23)) {
+    contatoreInvitatiJS23++;
+    // Inserisco i nomi generati in un array
+    listaInvitatiRandomJS23.push(invitatoRandomJS23);
+} else {
+    primo dubbio: è necessario l'else?
+    secondo dubbio: come simulo il caso di uguaglianza per testare la funzione?
+}
+*/
   
 }
+
 
 
 // Stampo i nomi generati
