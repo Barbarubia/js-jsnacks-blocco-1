@@ -59,6 +59,7 @@ nav {
 }
 
 .nav-card {
+    width: 50%;
     background-color: rgba(136, 128, 128, 0.6);
     border-bottom: 1px solid black;
     padding: .5rem 2rem;
@@ -83,6 +84,7 @@ nav {
 .nav-card:hover,
 .nav-card:active,
 .nav-card:focus {
+    width: 100%;
     background-color: rgba(255,255,255,.6);
     border: none;
     border-top-left-radius: 1rem;

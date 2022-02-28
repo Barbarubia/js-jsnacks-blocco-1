@@ -5,6 +5,10 @@ let buttonJS3 = document.getElementById('button-active-js3');
 let buttonJS4 = document.getElementById('button-active-js4');
 let buttonJS5 = document.getElementById('button-active-js5');
 let buttonJS6 = document.getElementById('button-active-js6');
+let buttonJS19 = document.getElementById('button-active-js19');
+let buttonJS21 = document.getElementById('button-active-js21');
+let buttonJS22 = document.getElementById('button-active-js22');
+let buttonJS23 = document.getElementById('button-active-js23');
 
 // Definisco un evento che al click su ciascun botton attiva le funzioni dei relativi JSnack (la cui prima istruzione è visualizzare l'HTML di quel JSnack)
 
@@ -14,6 +18,10 @@ buttonJS3.addEventListener('click', functionJSnack3);
 buttonJS4.addEventListener('click', functionJSnack4);
 buttonJS5.addEventListener('click', functionJSnack5);
 buttonJS6.addEventListener('click', functionJSnack6);
+buttonJS19.addEventListener('click', functionJSnack19);
+// buttonJS21.addEventListener('click', functionJSnack21);
+// buttonJS22.addEventListener('click', functionJSnack22);
+// buttonJS23.addEventListener('click', functionJSnack23);
 
 // Definisco gli elementi HTML che contengono i vari JSnacks
 let divJS1 = document.querySelector('.jsnack-01');
@@ -22,6 +30,10 @@ let divJS3 = document.querySelector('.jsnack-03');
 let divJS4 = document.querySelector('.jsnack-04');
 let divJS5 = document.querySelector('.jsnack-05');
 let divJS6 = document.querySelector('.jsnack-06');
+let divJS19 = document.querySelector('.jsnack-19');
+let divJS21 = document.querySelector('.jsnack-21');
+let divJS22 = document.querySelector('.jsnack-22');
+let divJS23 = document.querySelector('.jsnack-23');
 
 
 
@@ -45,6 +57,10 @@ divJS3.classList.add('display-none');
 divJS4.classList.add('display-none');
 divJS5.classList.add('display-none');
 divJS6.classList.add('display-none');
+divJS19.classList.add('display-none');
+divJS21.classList.add('display-none');
+divJS22.classList.add('display-none');
+divJS23.classList.add('display-none');
 
 // Abilito la visualizzazione dello JSnack 1 rimuovendo la classe display-none
 divJS1.classList.remove('display-none');
@@ -130,6 +146,10 @@ divJS3.classList.add('display-none');
 divJS4.classList.add('display-none');
 divJS5.classList.add('display-none');
 divJS6.classList.add('display-none');
+divJS19.classList.add('display-none');
+divJS21.classList.add('display-none');
+divJS22.classList.add('display-none');
+divJS23.classList.add('display-none');
 
 // Abilito la visualizzazione dello JSnack 2 rimuovendo la classe display-none
 divJS2.classList.remove('display-none');
@@ -178,6 +198,10 @@ divJS3.classList.add('display-none');
 divJS4.classList.add('display-none');
 divJS5.classList.add('display-none');
 divJS6.classList.add('display-none');
+divJS19.classList.add('display-none');
+divJS21.classList.add('display-none');
+divJS22.classList.add('display-none');
+divJS23.classList.add('display-none');
 
 // Abilito la visualizzazione dello JSnack 3 rimuovendo la classe display-none
 divJS3.classList.remove('display-none');
@@ -216,6 +240,10 @@ divJS3.classList.add('display-none');
 divJS4.classList.add('display-none');
 divJS5.classList.add('display-none');
 divJS6.classList.add('display-none');
+divJS19.classList.add('display-none');
+divJS21.classList.add('display-none');
+divJS22.classList.add('display-none');
+divJS23.classList.add('display-none');
 
 // Abilito la visualizzazione dello JSnack 4 rimuovendo la classe display-none
 divJS4.classList.remove('display-none');
@@ -325,6 +353,10 @@ divJS3.classList.add('display-none');
 divJS4.classList.add('display-none');
 divJS5.classList.add('display-none');
 divJS6.classList.add('display-none');
+divJS19.classList.add('display-none');
+divJS21.classList.add('display-none');
+divJS22.classList.add('display-none');
+divJS23.classList.add('display-none');
 
 // Abilito la visualizzazione dello JSnack 5 rimuovendo la classe display-none
 divJS5.classList.remove('display-none');
@@ -371,6 +403,10 @@ divJS3.classList.add('display-none');
 divJS4.classList.add('display-none');
 divJS5.classList.add('display-none');
 divJS6.classList.add('display-none');
+divJS19.classList.add('display-none');
+divJS21.classList.add('display-none');
+divJS22.classList.add('display-none');
+divJS23.classList.add('display-none');
 
 // Abilito la visualizzazione dello JSnack 6 rimuovendo la classe display-none
 divJS6.classList.remove('display-none');
@@ -418,3 +454,60 @@ calcButtonJS6.addEventListener('click', function () {
 }
 
 // FINE JSNACK 6
+
+
+
+
+/*
+INIZIO JSNACK 1.9
+
+Calcola la somma e la media dei primi 10 numeri.
+*/
+
+function functionJSnack19() {
+    
+// Pulisco la sezione main dell'HTML da eventuali precedenti JSnacks visualizzati
+divJS1.classList.add('display-none');
+divJS2.classList.add('display-none');
+divJS3.classList.add('display-none');
+divJS4.classList.add('display-none');
+divJS5.classList.add('display-none');
+divJS6.classList.add('display-none');
+divJS19.classList.add('display-none');
+divJS21.classList.add('display-none');
+divJS22.classList.add('display-none');
+divJS23.classList.add('display-none');
+
+// Abilito la visualizzazione dello JSnack 6 rimuovendo la classe display-none
+divJS19.classList.remove('display-none');
+
+// Definisco il numero di elementi
+const numElementsJS19 = 10;
+
+// Definisco il valore minimo = 1
+const minNumJS19 = 1;
+
+// Definisco il valore massimo = 10
+const maxNumJS19 = 10;
+
+// Definisco la variabile somma con valore iniziale pari a 0
+let sumJS19 = 0;
+
+// Definisco una variabile contatore con valore iniziale pari al valore minimo e la userò per il ciclo while
+let contatoreJS19 = minNumJS19;
+
+// Genero un ciclo while che incrementa di volta in volta il valore della variabile somma
+while (contatoreJS19 <= maxNumJS19) {
+    sumJS19 += contatoreJS19;
+    contatoreJS19++;
+}
+
+// Definisco una variabile per il calcolo della media
+let avarageJS19 = sumJS19 / numElementsJS19;
+
+// Stampo a video il risultato della somma e della media
+document.getElementById('js19-output').innerHTML = `La somma dei numeri da ${minNumJS19} a ${maxNumJS19} è ${sumJS19}, mentre il loro valore medio è ${avarageJS19}.`;
+
+}
+
+// FINE JSNACK 1.9
