@@ -22,7 +22,7 @@ buttonJS6.addEventListener('click', functionJSnack6);
 buttonJS19.addEventListener('click', functionJSnack19);
 buttonJS21.addEventListener('click', functionJSnack21);
 buttonJS21b.addEventListener('click', functionJSnack21b);
-// buttonJS22.addEventListener('click', functionJSnack22);
+buttonJS22.addEventListener('click', functionJSnack22);
 // buttonJS23.addEventListener('click', functionJSnack23);
 
 // Definisco gli elementi HTML che contengono i vari JSnacks
@@ -643,3 +643,53 @@ if (!isNaN(sumJS21b)) {
 }
 
 // FINE JSNACK 2.1 (FOR)
+
+
+
+
+
+/*
+INIZIO JSNACK 2.2
+
+Inserisci un numero, se è pari stampa il numero,
+se è dispari stampa il numero successivo
+*/
+
+function functionJSnack22() {
+    
+// Pulisco la sezione main dell'HTML da eventuali precedenti JSnacks visualizzati
+divJS1.classList.add('display-none');
+divJS2.classList.add('display-none');
+divJS3.classList.add('display-none');
+divJS4.classList.add('display-none');
+divJS5.classList.add('display-none');
+divJS6.classList.add('display-none');
+divJS19.classList.add('display-none');
+divJS21.classList.add('display-none');
+divJS21b.classList.add('display-none');
+divJS22.classList.add('display-none');
+divJS23.classList.add('display-none');
+
+// Abilito la visualizzazione dello JSnack 2.2 rimuovendo la classe display-none
+divJS22.classList.remove('display-none');
+
+// Chiedo all'utente di digitare un numero intero
+let numInseritoJS22 = prompt('Digita un numero intero');
+
+// Definisco l'elemento HTML dove stampo il risultato
+let outputAreaJS22 = document.getElementById('js22-output');
+
+if (isNaN(numInseritoJS22) || (numInseritoJS22 - parseInt(numInseritoJS22) != 0)) {
+    outputAreaJS22.innerHTML = `Devi digitare un valore numerico intero.`;
+} else if (numInseritoJS22 % 2 == 0) {
+    outputAreaJS22.innerHTML = `Hai digitato il numero ${numInseritoJS22}, che è un numero pari.`;
+} else {
+    numInseritoJS22++
+    outputAreaJS22.innerHTML = `Il numero che hai digitato è dispari. Il numero successivo a quello digitato è ${numInseritoJS22}, che è un numero pari.`;
+}
+
+}
+
+
+    
+    // FINE JSNACK 2.2
