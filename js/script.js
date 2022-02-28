@@ -19,7 +19,7 @@ buttonJS4.addEventListener('click', functionJSnack4);
 buttonJS5.addEventListener('click', functionJSnack5);
 buttonJS6.addEventListener('click', functionJSnack6);
 buttonJS19.addEventListener('click', functionJSnack19);
-// buttonJS21.addEventListener('click', functionJSnack21);
+buttonJS21.addEventListener('click', functionJSnack21);
 // buttonJS22.addEventListener('click', functionJSnack22);
 // buttonJS23.addEventListener('click', functionJSnack23);
 
@@ -511,3 +511,69 @@ document.getElementById('js19-output').innerHTML = `La somma dei numeri da ${min
 }
 
 // FINE JSNACK 1.9
+
+
+
+
+
+
+
+
+
+/*
+INIZIO JSNACK 2.1
+
+Il software deve chiedere per 5 volte all’utente di inserire un numero.
+Il programma stampa la somma di tutti i numeri inseriti.
+Esegui questo programma in due versioni, con il for e con il while.
+*/
+
+function functionJSnack21() {
+    
+// Pulisco la sezione main dell'HTML da eventuali precedenti JSnacks visualizzati
+divJS1.classList.add('display-none');
+divJS2.classList.add('display-none');
+divJS3.classList.add('display-none');
+divJS4.classList.add('display-none');
+divJS5.classList.add('display-none');
+divJS6.classList.add('display-none');
+divJS19.classList.add('display-none');
+divJS21.classList.add('display-none');
+divJS22.classList.add('display-none');
+divJS23.classList.add('display-none');
+
+// Abilito la visualizzazione dello JSnack 2.1 rimuovendo la classe display-none
+divJS21.classList.remove('display-none');
+
+// Definisco quante volte voglio che il programma chieda all'utente di inserire un numero tramite prompt
+let numPromptsJS21 = 5;
+
+// Definisco una variabile contatore che parte da 1 per il numero di prompts
+let contatoreJS21 = 1;
+
+// Definisco una variabile somma con valore iniziale pari a zero
+let sumJS21 = 0;
+
+// Definisco l'elemento HTML dove stamperò il risultato
+let outputAreaJS21 = document.getElementById('js21-output');
+
+// Genero un ciclo while che chiede "n" volte all'utente di inserire un numero e effettua la somma
+while (contatoreJS21 <= numPromptsJS21) {
+    // Chiedo all'utente di inserire un numero
+    let numeroInseritoJS21 = parseInt(prompt('Digita un numero'));
+    // Incremento il valore della variabile somma con il numero inserito
+    sumJS21 += numeroInseritoJS21;
+    // Incremento il contatore
+    contatoreJS21++;
+}
+
+// Verifico con una condizione IF se il valore ottenuto è numerico e, se true, stampo il risultato a video
+if (!isNaN(sumJS21)) {
+    outputAreaJS21.innerHTML = `La somma dei numeri inseriti è ${sumJS21}!`;
+} else {
+    outputAreaJS21.innerHTML = `Sono accettati esclusivamente input numerici.`;
+}
+
+}
+
+// FINE JSNACK 2.1
