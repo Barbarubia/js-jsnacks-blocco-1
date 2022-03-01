@@ -12,7 +12,6 @@ let buttonJS22 = document.getElementById('button-active-js22');
 let buttonJS23 = document.getElementById('button-active-js23');
 
 // Definisco un evento che al click su ciascun botton attiva le funzioni dei relativi JSnack (la cui prima istruzione è visualizzare l'HTML di quel JSnack)
-
 buttonJS1.addEventListener('click', functionJSnack1);
 buttonJS2.addEventListener('click', functionJSnack2);
 buttonJS3.addEventListener('click', functionJSnack3);
@@ -38,6 +37,20 @@ let divJS21b = document.querySelector('.jsnack-21b');
 let divJS22 = document.querySelector('.jsnack-22');
 let divJS23 = document.querySelector('.jsnack-23');
 
+// Definisco una funzione per effettuare una pulizia della schermata (sezione main) quando seleziono un altro JSnack
+function clear() {
+    divJS1.classList.add('display-none');
+    divJS2.classList.add('display-none');
+    divJS3.classList.add('display-none');
+    divJS4.classList.add('display-none');
+    divJS5.classList.add('display-none');
+    divJS6.classList.add('display-none');
+    divJS19.classList.add('display-none');
+    divJS21.classList.add('display-none');
+    divJS21b.classList.add('display-none');
+    divJS22.classList.add('display-none');
+    divJS23.classList.add('display-none');
+}
 
 
 
@@ -52,18 +65,8 @@ Il software stampa il maggiore.
 
 function functionJSnack1() {
 
-// Pulisco la sezione main dell'HTML da eventuali precedenti JSnacks visualizzati
-divJS1.classList.add('display-none');
-divJS2.classList.add('display-none');
-divJS3.classList.add('display-none');
-divJS4.classList.add('display-none');
-divJS5.classList.add('display-none');
-divJS6.classList.add('display-none');
-divJS19.classList.add('display-none');
-divJS21.classList.add('display-none');
-divJS21b.classList.add('display-none');
-divJS22.classList.add('display-none');
-divJS23.classList.add('display-none');
+// Richiamo la funzione che pulisce la sezione main dell'html
+clear();
 
 // Abilito la visualizzazione dello JSnack 1 rimuovendo la classe display-none
 divJS1.classList.remove('display-none');
@@ -142,18 +145,8 @@ Il software stampa prima la parola più corta, poi la parola più lunga.
 
 function functionJSnack2() {
     
-// Pulisco la sezione main dell'HTML da eventuali precedenti JSnacks visualizzati
-divJS1.classList.add('display-none');
-divJS2.classList.add('display-none');
-divJS3.classList.add('display-none');
-divJS4.classList.add('display-none');
-divJS5.classList.add('display-none');
-divJS6.classList.add('display-none');
-divJS19.classList.add('display-none');
-divJS21.classList.add('display-none');
-divJS21b.classList.add('display-none');
-divJS22.classList.add('display-none');
-divJS23.classList.add('display-none');
+// Richiamo la funzione che pulisce la sezione main dell'html
+clear();
 
 // Abilito la visualizzazione dello JSnack 2 rimuovendo la classe display-none
 divJS2.classList.remove('display-none');
@@ -195,18 +188,8 @@ Il programma stampa la somma di tutti i numeri inseriti.
 
 function functionJSnack3() {
     
-// Pulisco la sezione main dell'HTML da eventuali precedenti JSnacks visualizzati
-divJS1.classList.add('display-none');
-divJS2.classList.add('display-none');
-divJS3.classList.add('display-none');
-divJS4.classList.add('display-none');
-divJS5.classList.add('display-none');
-divJS6.classList.add('display-none');
-divJS19.classList.add('display-none');
-divJS21.classList.add('display-none');
-divJS21b.classList.add('display-none');
-divJS22.classList.add('display-none');
-divJS23.classList.add('display-none');
+// Richiamo la funzione che pulisce la sezione main dell'html
+clear();
 
 // Abilito la visualizzazione dello JSnack 3 rimuovendo la classe display-none
 divJS3.classList.remove('display-none');
@@ -238,18 +221,8 @@ Chiedi all’utente il suo nome e comunicagli se può partecipare o no alla fest
 
 function functionJSnack4() {
     
-// Pulisco la sezione main dell'HTML da eventuali precedenti JSnacks visualizzati
-divJS1.classList.add('display-none');
-divJS2.classList.add('display-none');
-divJS3.classList.add('display-none');
-divJS4.classList.add('display-none');
-divJS5.classList.add('display-none');
-divJS6.classList.add('display-none');
-divJS19.classList.add('display-none');
-divJS21.classList.add('display-none');
-divJS21b.classList.add('display-none');
-divJS22.classList.add('display-none');
-divJS23.classList.add('display-none');
+// Richiamo la funzione che pulisce la sezione main dell'html
+clear();
 
 // Abilito la visualizzazione dello JSnack 4 rimuovendo la classe display-none
 divJS4.classList.remove('display-none');
@@ -352,18 +325,8 @@ Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo
 
 function functionJSnack5() {
     
-// Pulisco la sezione main dell'HTML da eventuali precedenti JSnacks visualizzati
-divJS1.classList.add('display-none');
-divJS2.classList.add('display-none');
-divJS3.classList.add('display-none');
-divJS4.classList.add('display-none');
-divJS5.classList.add('display-none');
-divJS6.classList.add('display-none');
-divJS19.classList.add('display-none');
-divJS21.classList.add('display-none');
-divJS21b.classList.add('display-none');
-divJS22.classList.add('display-none');
-divJS23.classList.add('display-none');
+// Richiamo la funzione che pulisce la sezione main dell'html
+clear();
 
 // Abilito la visualizzazione dello JSnack 5 rimuovendo la classe display-none
 divJS5.classList.remove('display-none');
@@ -403,18 +366,8 @@ e calcola la somma di tutte le cifre che compongono il numero.
 
 function functionJSnack6() {
     
-// Pulisco la sezione main dell'HTML da eventuali precedenti JSnacks visualizzati
-divJS1.classList.add('display-none');
-divJS2.classList.add('display-none');
-divJS3.classList.add('display-none');
-divJS4.classList.add('display-none');
-divJS5.classList.add('display-none');
-divJS6.classList.add('display-none');
-divJS19.classList.add('display-none');
-divJS21.classList.add('display-none');
-divJS21b.classList.add('display-none');
-divJS22.classList.add('display-none');
-divJS23.classList.add('display-none');
+// Richiamo la funzione che pulisce la sezione main dell'html
+clear();
 
 // Abilito la visualizzazione dello JSnack 6 rimuovendo la classe display-none
 divJS6.classList.remove('display-none');
@@ -474,18 +427,8 @@ Calcola la somma e la media dei primi 10 numeri.
 
 function functionJSnack19() {
     
-// Pulisco la sezione main dell'HTML da eventuali precedenti JSnacks visualizzati
-divJS1.classList.add('display-none');
-divJS2.classList.add('display-none');
-divJS3.classList.add('display-none');
-divJS4.classList.add('display-none');
-divJS5.classList.add('display-none');
-divJS6.classList.add('display-none');
-divJS19.classList.add('display-none');
-divJS21.classList.add('display-none');
-divJS21b.classList.add('display-none');
-divJS22.classList.add('display-none');
-divJS23.classList.add('display-none');
+// Richiamo la funzione che pulisce la sezione main dell'html
+clear();
 
 // Abilito la visualizzazione dello JSnack 6 rimuovendo la classe display-none
 divJS19.classList.remove('display-none');
@@ -539,18 +482,8 @@ Esegui questo programma in due versioni, con il for e con il while.
 
 function functionJSnack21() {
     
-// Pulisco la sezione main dell'HTML da eventuali precedenti JSnacks visualizzati
-divJS1.classList.add('display-none');
-divJS2.classList.add('display-none');
-divJS3.classList.add('display-none');
-divJS4.classList.add('display-none');
-divJS5.classList.add('display-none');
-divJS6.classList.add('display-none');
-divJS19.classList.add('display-none');
-divJS21.classList.add('display-none');
-divJS21b.classList.add('display-none');
-divJS22.classList.add('display-none');
-divJS23.classList.add('display-none');
+// Richiamo la funzione che pulisce la sezione main dell'html
+clear();
 
 // Abilito la visualizzazione dello JSnack 2.1 (while) rimuovendo la classe display-none
 divJS21.classList.remove('display-none');
@@ -601,18 +534,8 @@ Esegui questo programma in due versioni, con il for e con il while.
 
 function functionJSnack21b() {
     
-// Pulisco la sezione main dell'HTML da eventuali precedenti JSnacks visualizzati
-divJS1.classList.add('display-none');
-divJS2.classList.add('display-none');
-divJS3.classList.add('display-none');
-divJS4.classList.add('display-none');
-divJS5.classList.add('display-none');
-divJS6.classList.add('display-none');
-divJS19.classList.add('display-none');
-divJS21.classList.add('display-none');
-divJS21b.classList.add('display-none');
-divJS22.classList.add('display-none');
-divJS23.classList.add('display-none');
+// Richiamo la funzione che pulisce la sezione main dell'html
+clear();
 
 // Abilito la visualizzazione dello JSnack 2.1 (for) rimuovendo la classe display-none
 divJS21b.classList.remove('display-none');
@@ -657,18 +580,8 @@ se è dispari stampa il numero successivo
 
 function functionJSnack22() {
     
-// Pulisco la sezione main dell'HTML da eventuali precedenti JSnacks visualizzati
-divJS1.classList.add('display-none');
-divJS2.classList.add('display-none');
-divJS3.classList.add('display-none');
-divJS4.classList.add('display-none');
-divJS5.classList.add('display-none');
-divJS6.classList.add('display-none');
-divJS19.classList.add('display-none');
-divJS21.classList.add('display-none');
-divJS21b.classList.add('display-none');
-divJS22.classList.add('display-none');
-divJS23.classList.add('display-none');
+// Richiamo la funzione che pulisce la sezione main dell'html
+clear();
 
 // Abilito la visualizzazione dello JSnack 2.2 rimuovendo la classe display-none
 divJS22.classList.remove('display-none');
@@ -704,18 +617,8 @@ Generatore di “nomi cognomi” casuali: prendendo una lista di nomi e una list
 
 function functionJSnack23() {
     
-// Pulisco la sezione main dell'HTML da eventuali precedenti JSnacks visualizzati
-divJS1.classList.add('display-none');
-divJS2.classList.add('display-none');
-divJS3.classList.add('display-none');
-divJS4.classList.add('display-none');
-divJS5.classList.add('display-none');
-divJS6.classList.add('display-none');
-divJS19.classList.add('display-none');
-divJS21.classList.add('display-none');
-divJS21b.classList.add('display-none');
-divJS22.classList.add('display-none');
-divJS23.classList.add('display-none');
+// Richiamo la funzione che pulisce la sezione main dell'html
+clear();
 
 // Abilito la visualizzazione dello JSnack 2.3 rimuovendo la classe display-none
 divJS23.classList.remove('display-none');
